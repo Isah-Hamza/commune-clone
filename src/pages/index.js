@@ -467,7 +467,7 @@ const Index = () => {
             </button>
           </section>
         </footer> */}
-        <footer className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 text-[13px] mt-20">
+        <footer className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 text-[13px] mt-24">
           <div className="grid sm:grid-cols-2 gap-y-10 lg:flex justify-between">
             <div>
               <img src={monnifyLogo} alt="monify logo" />
