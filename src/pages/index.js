@@ -1,7 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+
+import { useNavigate } from "react-router-dom";
+
 import globe from "../assets/Globe_qi8why.png";
 import keyOfferings from "../assets/KeyOfferings_y9gh8q.png";
 import monnifyLogo from "../assets/monnify.svg";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import pexel1 from "../assets/pexels-andrea.jpg";
 import pexel2 from "../assets/pexels-balljinder.jpg";
@@ -16,6 +23,24 @@ import bankly from "../assets/bankly.svg";
 
 const Index = () => {
   const [scrollHeight, setScrollHeight] = useState(0);
+  const [openMobileNav, setOpenMobileNav] = useState(false);
+  const navigate = useNavigate();
+
+  const hamburger = useRef(null);
+  const closeBtn = useRef(null);
+  const mobileHeader = useRef(null);
+
+  let settings = {
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    fade: true,
+    autoplay: true,
+  };
+
+  function toggleOpenNav() {
+    setOpenMobileNav((prev) => !prev);
+  }
 
   useEffect(() => {
     let listener = document.addEventListener("scroll", () => {
@@ -30,47 +55,135 @@ const Index = () => {
     <div>
       <div
         id="app"
-        className="h-full w-full bg-background dark:bg-background-d"
+        className="h-full w-full overflow-x-hidden text-sm sm:text-base"
       >
         <div className="h-[1px] mt-[1px] lg:mt-8"></div>
-        <header
-          className={`sticky top-0 py-3 ${
-            scrollHeight > 50 && "bg-[#fffc]/90 border-b z-10"
-          } backdrop-filter backdrop-blur-xl before:w-full before:absolute before:bottom-0 before:left-0 before:bg-divider dark:before:bg-divider-d before:transition-opacity before:opacity-0`}
-        >
-          <div className="px-4 lg:px-16 flex items-center justify-between">
-            <a href="https://www.getcommune.co/">
-              <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
+        <header>
+          <div
+            className={`hidden desktop-md:block sticky top-0 py-3 ${
+              scrollHeight > 50 &&
+              "bg-[#fffc]/90 border-b !z-10 !fixed !w-full !py-5"
+            } backdrop-filter backdrop-blur-xl transition-all duration-400 before:w-full before:absolute before:bottom-0 before:left-0 before:bg-divider dark:before:bg-divider-d before:transition-opacity before:opacity-0`}
+          >
+            <div className="px-4 lg:px-16 flex items-center justify-between">
+              <a href="#/">
+                <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
+                  {" "}
+                  Commune{" "}
+                </h1>
+              </a>
+              <nav>
+                <ul className="flex items-center space-x-11">
+                  <li>
+                    <a href="https://www.getcommune.co/#about-us">About Us</a>
+                  </li>
+                  <li>
+                    <a href="https://www.getcommune.co/#key-offerings">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.getcommune.co/#contact-us">
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <button
+                onClick={() => navigate("/payment")}
+                type="button"
+                className="bg-customBlue fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
+                data-v-682d5bac=""
+              >
                 {" "}
-                Commune{" "}
-              </h1>
-            </a>
-            <nav>
-              <ul className="flex items-center space-x-11">
-                <li>
-                  <a href="https://www.getcommune.co/#about-us">About Us</a>
-                </li>
-                <li>
-                  <a href="https://www.getcommune.co/#key-offerings">
-                    Services
+                Get Early Access{" "}
+              </button>
+            </div>
+          </div>
+          <div
+            ref={mobileHeader}
+            className={`z-10 block desktop-md:hidden fixed w-full top-0 py-5 ${
+              scrollHeight > 50 && "bg-[#fffc]/90 border-b backdrop-blur-xl"
+            }  !z-10 backdrop-filter before:w-full before:absolute before:bottom-0 before:left-0 before:bg-divider dark:before:bg-divider-d before:transition-opacity before:opacity-0`}
+          >
+            <div className="px-4 lg:px-16 flex items-center justify-between">
+              <a href="#/">
+                <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
+                  {" "}
+                  Commune{" "}
+                </h1>
+              </a>
+              <div>
+                <div
+                  onClick={toggleOpenNav}
+                  ref={hamburger}
+                  className="hamburger"
+                >
+                  <svg
+                    className="scale-x-150"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 20 20"
+                    class="text-background-d dark:text-background"
+                  >
+                    <g fill="currentColor">
+                      <path d="M3 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div
+                  className={`${
+                    openMobileNav && "!top-0"
+                  } transition-all duration-500 -top-[400px] shadow-none z-10 fixed left-0 bg-white px-5 py-10 pt-7 gap-10 border-b w-full flex flex-col`}
+                >
+                  <div
+                    onClick={toggleOpenNav}
+                    ref={closeBtn}
+                    className="close-btn absolute right-5 top-5 cursor-pointer"
+                  >
+                    <span className="text-3xl">&times;</span>
+                  </div>
+                  <a href="#/">
+                    <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
+                      {" "}
+                      Commune{" "}
+                    </h1>
                   </a>
-                </li>
-                <li>
-                  <a href="https://www.getcommune.co/#contact-us">Contact Us</a>
-                </li>
-              </ul>
-            </nav>
-            <button
-              type="button"
-              className="bg-customBlue fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
-              data-v-682d5bac=""
-            >
-              {" "}
-              Get Early Access{" "}
-            </button>
+                  <nav>
+                    <ul className="flex flex-col gap-10">
+                      <li>
+                        <a href="https://www.getcommune.co/#about-us">
+                          About Us
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.getcommune.co/#key-offerings">
+                          Services
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.getcommune.co/#contact-us">
+                          Contact Us
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <button
+                    onClick={() => navigate("/payment")}
+                    type="button"
+                    className=" bg-customBlue fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
+                    data-v-682d5bac=""
+                  >
+                    {" "}
+                    Get Early Access{" "}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </header>
-        <section className="relative isolate">
+        <section className="relative isolate mt-[72px] desktop-md:mt-[unset]">
           <div className="absolute -z-1 top-[-8rem]">
             <svg
               width="728"
@@ -100,16 +213,16 @@ const Index = () => {
                 {" "}
                 Find a home with the best search experience{" "}
               </h2>
-              <p className="text-base lg:text-lg mt-4 lg:mt-6 opacity-90">
+              <p className="text-sm sm:text-base lg:text-lg mt-4 lg:mt-6 opacity-90">
                 {" "}
                 Find and rent your dream house - find a flatmate - list your
                 property for rent at no cost. All on one app. Save time and
                 money with Commune.{" "}
               </p>
               <button
+                onClick={() => navigate("/payment")}
                 type="button"
-                className="bg-customBlue fill-before px-10 py-4 text-white text-base rounded-lg font-semibold mt-5 cursor-pointer"
-                data-v-682d5bac=""
+                className="relative isolate bg-customBlue px-10 py-4 text-white text-base rounded-lg font-semibold mt-5 cursor-pointer"
               >
                 {" "}
                 Get Early Access{" "}
@@ -122,7 +235,6 @@ const Index = () => {
                     src={globe}
                     alt="Globes"
                     className="Img"
-                    // data-fendui-img=""
                     style={{ "--transition": "opacity 200ms linear 0ms" }}
                   />
                 </span>
@@ -140,16 +252,14 @@ const Index = () => {
           </h2>
           <div className="flex-col lg:flex-row flex lg:text-left lg:space-x-4 pt-4 lg:pt-8">
             <div className="lg:w-[50%]">
-              <div className="flex justify-start">
+              <div className="flex justify-center desktop-md:justify-start">
                 <span className="w-[min(32rem,50vw)] inline-block">
                   <img
                     aria-label="Image"
                     alt="about us"
                     src="https://res.cloudinary.com/themachine/image/upload/v1660630058/commune-web/public/AboutUs_uyaj1k.png"
                     // src='../assets/Globe_qi8why.png'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full h-full"
+                    className="w-full h-full "
                     style={{
                       display: "inline-block",
                       pointerEvents: "none",
@@ -251,7 +361,7 @@ const Index = () => {
           </h2>
           <div className="flex-col lg:flex-row flex lg:text-left lg:space-x-4 pt-4 lg:pt-8">
             <div className="lg:w-[50%]">
-              <div className="flex justify-start">
+              <div className="flex justify-center desktop-md:justify-start">
                 <span className="w-[min(32rem,50vw)] inline-block">
                   <img
                     alt="how it works"
@@ -302,46 +412,150 @@ const Index = () => {
         <section id="partners" className="mt-28">
           <h2
             id="how-it-works"
-            className="text-primary-base dark:text-[#6489d0] text-center font-bold text-xl lg:text-3xl mb-14"
+            className="text-primary-base dark:text-[#6489d0] text-center font-bold text-xl lg:text-3xl mb-10"
           >
             Our Partners{" "}
           </h2>
-          <div className="flex flex-col gap-10 max-w-[1000px] mx-auto">
-            <div className="item flex rounded-xl bg-white shadow-sm overflow-hidden">
-              <div className="w-[400px]">
-                <img
-                  className="h-80 min-h-full w-full object-cover"
-                  src={pexel1}
-                  alt="pexels"
-                />
-              </div>
-              <div className="flex flex-col pl-14 px-24 py-16 max-w-[550px] text-sm">
-                <span>
-                  <svg
-                    width="58"
-                    height="41"
-                    viewBox="0 0 58 41"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.4167 0L12.25 16.3333H24.5V40.8333H0V16.3333L8.16667 0H20.4167ZM53.0833 0L44.9167 16.3333H57.1667V40.8333H32.6667V16.3333L40.8333 0H53.0833Z"
-                      fill="#FDB515"
-                    ></path>
-                  </svg>
-                </span>
-                <p className="mt-5 text-xs opacity-60">
-                  Monnify is currently solving one of the biggest challenges we
-                  had in collecting payments. The innovation has drastically
-                  helped us improve our efficiency as a business.
-                </p>
-                <div className="mt-10">
-                  <p className="text-sm font-semibold">Edward Popoola</p>
-                  <p className="text-xs opacity-50">CTO - CirlceWind</p>
+          <div className="flex flex-col gap-10 max-w-[1000px] mx-auto px-5 md:px-10">
+            <Slider {...settings}>
+              <div className="item !flex flex-col md:flex-row !rounded-xl bg-white !shadow-sm overflow-hidden">
+                <div className="w-full sm:w-[400px]">
+                  <img
+                    className="h-80 min-h-full w-full object-cover"
+                    src={pexel1}
+                    alt="pexels"
+                  />
+                </div>
+                <div className="flex flex-col md:pl-14 px-5 sm:px-10 md:px-24  py-10 md:py-16 max-w-[550px] text-sm">
+                  <span>
+                    <svg
+                      width="58"
+                      height="41"
+                      viewBox="0 0 58 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.4167 0L12.25 16.3333H24.5V40.8333H0V16.3333L8.16667 0H20.4167ZM53.0833 0L44.9167 16.3333H57.1667V40.8333H32.6667V16.3333L40.8333 0H53.0833Z"
+                        fill="#FDB515"
+                      ></path>
+                    </svg>
+                  </span>
+                  <p className="mt-5 text-[13px] opacity-60 leading-relaxed">
+                    dweller is currently solving one of the biggest challenges
+                    we had in collecting payments. The innovation has
+                    drastically helped us improve our efficiency as a business.
+                  </p>
+                  <div className="mt-10">
+                    <p className="text-sm font-semibold">Edward Popoola</p>
+                    <p className="text-xs opacity-50">CTO - CirlceWind</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex gap-5 items-center justify-center">
+              <div className="item !flex flex-col md:flex-row !rounded-xl bg-white !shadow-sm overflow-hidden">
+                <div className="w-full sm:w-[400px]">
+                  <img
+                    className="h-80 min-h-full w-full object-cover"
+                    src={pexel3}
+                    alt="pexels"
+                  />
+                </div>
+                <div className="flex flex-col md:pl-14 px-5 sm:px-10 md:px-24  py-10 md:py-16 max-w-[550px] text-sm">
+                  <span>
+                    <svg
+                      width="58"
+                      height="41"
+                      viewBox="0 0 58 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.4167 0L12.25 16.3333H24.5V40.8333H0V16.3333L8.16667 0H20.4167ZM53.0833 0L44.9167 16.3333H57.1667V40.8333H32.6667V16.3333L40.8333 0H53.0833Z"
+                        fill="#FDB515"
+                      ></path>
+                    </svg>
+                  </span>
+                  <p className="mt-5 text-[13px] opacity-60 leading-relaxed">
+                    dweller is Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Quisquam corporis quos repudiandae fuga
+                    doloremque sint placeat..
+                  </p>
+                  <div className="mt-10">
+                    <p className="text-sm font-semibold">Edward Popoola</p>
+                    <p className="text-xs opacity-50">CTO - CirlceWind</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item !flex flex-col md:flex-row !rounded-xl bg-white !shadow-sm overflow-hidden">
+                <div className="w-full sm:w-[400px]">
+                  <img
+                    className="h-80 min-h-full w-full object-cover"
+                    src={pexel2}
+                    alt="pexels"
+                  />
+                </div>
+                <div className="flex flex-col md:pl-14 px-5 sm:px-10 md:px-24  py-10 md:py-16 max-w-[550px] text-sm">
+                  <span>
+                    <svg
+                      width="58"
+                      height="41"
+                      viewBox="0 0 58 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.4167 0L12.25 16.3333H24.5V40.8333H0V16.3333L8.16667 0H20.4167ZM53.0833 0L44.9167 16.3333H57.1667V40.8333H32.6667V16.3333L40.8333 0H53.0833Z"
+                        fill="#FDB515"
+                      ></path>
+                    </svg>
+                  </span>
+                  <p className="mt-5 text-[13px] opacity-60 leading-relaxed">
+                    dweller is currently solving one of the biggest challenges
+                    we had in collecting payments. The innovation has
+                    drastically helped us improve our efficiency as a business.
+                  </p>
+                  <div className="mt-10">
+                    <p className="text-sm font-semibold">Edward Popoola</p>
+                    <p className="text-xs opacity-50">CTO - CirlceWind</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item !flex flex-col md:flex-row !rounded-xl bg-white !shadow-sm overflow-hidden">
+                <div className="w-full sm:w-[400px]">
+                  <img
+                    className="h-80 min-h-full w-full object-cover"
+                    src={pexel4}
+                    alt="pexels"
+                  />
+                </div>
+                <div className="flex flex-col md:pl-14 px-5 sm:px-10 md:px-24  py-10 md:py-16 max-w-[550px] text-sm">
+                  <span>
+                    <svg
+                      width="58"
+                      height="41"
+                      viewBox="0 0 58 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.4167 0L12.25 16.3333H24.5V40.8333H0V16.3333L8.16667 0H20.4167ZM53.0833 0L44.9167 16.3333H57.1667V40.8333H32.6667V16.3333L40.8333 0H53.0833Z"
+                        fill="#FDB515"
+                      ></path>
+                    </svg>
+                  </span>
+                  <p className="mt-5 text-[13px] opacity-60 leading-relaxed">
+                    dweller is currently solving one of the biggest challenges
+                    we had in collecting payments. The innovation has
+                    drastically helped us improve our efficiency as a business.
+                  </p>
+                  <div className="mt-10">
+                    <p className="text-sm font-semibold">Edward Popoola</p>
+                    <p className="text-xs opacity-50">CTO - CirlceWind</p>
+                  </div>
+                </div>
+              </div>
+            </Slider>
+            <div className="flex flex-wrap gap-5 items-center justify-center">
               <div className="w-[140px] h-[65px] px-5 py-3 border rounded-md shadow-sm cursor-pointer">
                 <img className="w-full h-full" src={wallet} alt="wallet" />
               </div>
@@ -378,7 +592,7 @@ const Index = () => {
           </div>
           <form
             name="contactUs"
-            className="ui-form dark-theme max-w-xs lg:max-w-lg mx-auto grid gap-y-5 mt-6 mb-20 lg:mt-12 px-4"
+            className="ui-form dark-theme max-w-xs lg:max-w-lg mx-auto grid gap-y-5 mt-6 mb-20 lg:mt-12"
             id="contact-us-form"
             action="https://www.getcommune.co/"
           >
@@ -478,75 +692,6 @@ const Index = () => {
             </button>
           </div>
         </section>
-        {/* <footer className="mt-8 md:mt-12 fill-before relative before:bg-current isolate before:-z-1 before:opacity-[0.025]">
-          <hr className="border-t border-divider dark:border-divider-d mb-8 md:mb-12" />
-          <section className="grid justify-center mb-8">
-            <p className="text-heading mb-6 text-lg text-center font-semibold">
-              {" "}
-              Contact us{" "}
-            </p>
-            <div className="grid grid-cols-2 gap-3 md:gap-5">
-              <a
-                type="button"
-                href="https://twitter.com/commune_co"
-                title="Twitter"
-                target="_blank"
-                rel="noreferrer"
-                icon=""
-                className="flex justify-center items-center fill-before !bg-transparent !w-12 !h-12 !px-0 !text-xl text-inherit"
-              >
-                <svg width="1.23em" height="1em" viewBox="0 0 256 209">
-                  <path
-                    fill="#55acee"
-                    d="M256 25.45a105.04 105.04 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52c0 4.117.465 8.125 1.36 11.97c-43.65-2.191-82.35-23.1-108.255-54.876c-4.52 7.757-7.11 16.78-7.11 26.404c0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 0 1-23.79-6.57c-.003.22-.003.44-.003.661c0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475c-17.975 14.086-40.622 22.483-65.228 22.483c-4.24 0-8.42-.249-12.529-.734c23.243 14.902 50.85 23.597 80.51 23.597c96.607 0 149.434-80.031 149.434-149.435c0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 0 0 256 25.45"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                type="button"
-                href="https://linkedin.com/company/getcommune/"
-                title="LinkedIn"
-                target="_blank"
-                rel="noreferrer"
-                icon=""
-                className="flex justify-center items-center fill-before !bg-transparent !w-12 !h-12 !px-0 !text-xl text-inherit"
-              >
-                <svg width="1em" height="1em" viewBox="0 0 256 256">
-                  <path
-                    fill="#0A66C2"
-                    d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4c-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009c-.002-12.157 9.851-22.014 22.008-22.016c12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </section>
-          <section className="flex items-center justify-between px-4 lg:px-16">
-            <a href="https://www.getcommune.co/">
-              <h2 className="text-primary-base dark:text-[#6489d0] font-black text-lg py-8 lg:text-xl">
-                {" "}
-                Commune{" "}
-              </h2>
-            </a>
-            <button
-              type="button"
-              className="Button fill-before !bg-transparent !w-9 !h-9 !px-0 !text-xl text-inherit"
-              data-v-682d5bac=""
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 256 256"
-                className="text-background-d/90 dark:text-background/80"
-              >
-                <path
-                  fill="currentColor"
-                  d="M196 128a68 68 0 1 1-68-68a68.1 68.1 0 0 1 68 68Zm-68-84a8 8 0 0 0 8-8V16a8 8 0 0 0-16 0v20a8 8 0 0 0 8 8ZM57.3 68.6a8.1 8.1 0 0 0 11.3 0a8 8 0 0 0 0-11.3L54.5 43.1a8.1 8.1 0 1 0-11.4 11.4ZM44 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h20a8 8 0 0 0 8-8Zm13.3 59.4l-14.2 14.1a8.1 8.1 0 0 0 0 11.4a8.5 8.5 0 0 0 5.7 2.3a8.3 8.3 0 0 0 5.7-2.3l14.1-14.2a8 8 0 0 0-11.3-11.3ZM128 212a8 8 0 0 0-8 8v20a8 8 0 0 0 16 0v-20a8 8 0 0 0-8-8Zm70.7-24.6a8 8 0 0 0-11.3 11.3l14.1 14.2a8.3 8.3 0 0 0 5.7 2.3a8.5 8.5 0 0 0 5.7-2.3a8.1 8.1 0 0 0 0-11.4ZM240 120h-20a8 8 0 0 0 0 16h20a8 8 0 0 0 0-16Zm-46.9-49.1a7.8 7.8 0 0 0 5.6-2.3l14.2-14.1a8.1 8.1 0 0 0-11.4-11.4l-14.1 14.2a8 8 0 0 0 0 11.3a7.8 7.8 0 0 0 5.7 2.3Z"
-                ></path>
-              </svg>
-            </button>
-          </section>
-        </footer> */}
         <footer className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 text-[13px] mt-24">
           <div className="grid sm:grid-cols-2 gap-y-10 lg:flex justify-between">
             <div>

@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card-container .blue {
+  color: #3b82f6;
+}
+.card-container img {
+  width: 21px;
+  height: 24px;
+}
+
+.card-container {
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.card-container .confirmation-card {
+  width: 375px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+.card-container .header img {
+  width: 24px;
+  height: 18px;
+  border-radius: 5px;
+  padding: 2px 4px;
+  box-shadow: 0 0 2px gainsboro;
+  cursor: pointer;
+}
+.card-container .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card-container .header h3 {
+  margin-right: auto;
+  margin-left: auto;
+}
+.card-container .total-cost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card-container .total-cost h3 {
+  font-size: 25px;
+}
+.card-container .total-cost p {
+  font-size: 12px;
+}
+.card-container .stock-bought {
+  margin-bottom: 30px;
+}
+.card-container .stock-bought .item-bought {
+  background-color: #eff6ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.card-container .item-bought > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.card-container .item-bought > div > div > p:first-child {
+  font-weight: bold;
+}
+.card-container .payment-method {
+  margin-bottom: 30px;
+}
+.card-container .payment-method > p,
+.card-container .payment-details > p,
+.card-container .stock-bought > p {
+  margin-bottom: 20px;
+  color: #999999;
+  font-size: 14px;
+}
+.card-container .stock-bought img {
+  width: 30px;
+  height: 35px;
+}
+.card-container .payment-method > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding: 7px 15px;
+  font-size: 14px;
+}
+.card-container .payment-method img {
+  width: 35px;
+  height: 36px;
+}
+.card-container .payment-details {
+  margin-bottom: 30px;
+}
+
+.card-container .payment-details > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card-container .payment-details > div > div > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+.card-container .payment-details > div > div > p {
+  font-size: 14px;
+  font-weight: 700;
+}
+.card-container .confirm-btn button {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width:380px) {
+    .confirmation-card{ width:350px !important }
+}
