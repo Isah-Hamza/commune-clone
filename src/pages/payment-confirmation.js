@@ -9,7 +9,6 @@ import picture from '../assets/icons8-picture-50.png';
 import signal from '../assets/icons8-signal-50.png';
 import dollarCoin from '../assets/icons8-dollar-coin-50.png';
 
-
 const PaymentConfirmation = () => {
     const navigate = useNavigate();
   return (

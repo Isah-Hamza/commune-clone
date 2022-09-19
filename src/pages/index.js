@@ -21,6 +21,8 @@ import cowryWise from "../assets/cowrywise.svg";
 import thrive from "../assets/thrive.svg";
 import bankly from "../assets/bankly.svg";
 
+import dwellerLogo from "../assets/dweller-logo.png";
+
 const Index = () => {
   const [scrollHeight, setScrollHeight] = useState(0);
   const [openMobileNav, setOpenMobileNav] = useState(false);
@@ -62,15 +64,18 @@ const Index = () => {
           <div
             className={`hidden desktop-md:block sticky top-0 py-3 ${
               scrollHeight > 50 &&
-              "bg-[#fffc]/90 border-b !z-10 !fixed !w-full !py-5"
+              "bg-[#fffc]/90 border-b !z-10 !fixed !w-full !py-2"
             } backdrop-filter backdrop-blur-xl transition-all duration-400 before:w-full before:absolute before:bottom-0 before:left-0 before:bg-divider dark:before:bg-divider-d before:transition-opacity before:opacity-0`}
           >
             <div className="px-4 lg:px-16 flex items-center justify-between">
               <a href="#/">
-                <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
-                  {" "}
-                  Commune{" "}
-                </h1>
+                <img
+                  className="translate-y-[18px] w-36"
+                  src={dwellerLogo}
+                  alt="Dweller"
+                  data-rjs="2"
+                  width="110px"
+                />
               </a>
               <nav>
                 <ul className="flex items-center space-x-11">
@@ -108,10 +113,13 @@ const Index = () => {
           >
             <div className="px-4 lg:px-16 flex items-center justify-between">
               <a href="#/">
-                <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
-                  {" "}
-                  Commune{" "}
-                </h1>
+                <img
+                  src={dwellerLogo}
+                  alt="Dweller"
+                  data-rjs="2"
+                  width="110px"
+                  className="translate-y-4"
+                />
               </a>
               <div>
                 <div
@@ -135,7 +143,7 @@ const Index = () => {
                 <div
                   className={`${
                     openMobileNav && "!top-0"
-                  } transition-all duration-500 -top-[400px] shadow-none z-10 fixed left-0 bg-white px-5 py-10 pt-7 gap-10 border-b w-full flex flex-col`}
+                  } transition-all duration-500 -top-[420px] shadow-none z-10 fixed left-0 bg-white px-5 py-10 pt-7 gap-10 border-b w-full flex flex-col`}
                 >
                   <div
                     onClick={toggleOpenNav}
@@ -145,10 +153,13 @@ const Index = () => {
                     <span className="text-3xl">&times;</span>
                   </div>
                   <a href="#/">
-                    <h1 className="text-primary-base dark:text-[#6489d0] font-black text-2xl lg:text-3xl">
-                      {" "}
-                      Commune{" "}
-                    </h1>
+                    <img
+                      src={dwellerLogo}
+                      className="-translate-y-[3px]"
+                      alt="Dweller"
+                      data-rjs="2"
+                      width="110px"
+                    />
                   </a>
                   <nav>
                     <ul className="flex flex-col gap-10">
@@ -211,13 +222,13 @@ const Index = () => {
             <div className="lg:max-w-[min(33rem,55%)] order-2 lg:order-1 px-4 lg:px-0">
               <h2 className="text-primary-base dark:text-[#6489d0] font-bold text-2xl lg:text-4xl">
                 {" "}
-                Find a home with the best search experience{" "}
+                Powering digitization of the real estate ecosystem{" "}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg mt-4 lg:mt-6 opacity-90">
                 {" "}
-                Find and rent your dream house - find a flatmate - list your
-                property for rent at no cost. All on one app. Save time and
-                money with Commune.{" "}
+                Craeting value through digitization of properties. With dweller,
+                you can now manage your properties, make payments effortless and
+                live connectedly{" "}
               </p>
               <button
                 onClick={() => navigate("/payment")}
@@ -271,22 +282,26 @@ const Index = () => {
             <div className="mt-8 lg:mt-20 lg:w-[min(40rem,50%)] lg:max-w-lg px-4 lg:px-0">
               <h3 className="font-semibold text-xl lg:text-2xl mb-7 lg:mb-9">
                 {" "}
-                Housing solutions for modern Africa{" "}
+                Real Estate solutions for modern Africa{" "}
               </h3>
               <div className="grid gap-y-4 lg:gap-y-6">
                 <p>
                   {" "}
-                  We connect people looking to rent with homeowners in less time
-                  and at little cost.{" "}
+                  We create a central infrastructure for day-to-day activities
+                  in the real estate community. These activities range from
+                  finding properties, Easy access to Property Finacing, Property
+                  Management, Property Insurance, real estate agencies, Digital
+                  Community Living, and promoting shared community.{" "}
                 </p>
                 <p>
                   {" "}
-                  With Commune, you can virtually inspect your apartment from
-                  anywhere with an improved visual experience.{" "}
+                  We believe that properties can be represented with digital
+                  representation and this can promote next evolution of the
+                  reasl estate community.{" "}
                 </p>
                 <p>
-                  Spend less time closing deals when you list your homes with
-                  us.
+                  Sign up today on dweller to tap into the power of of the
+                  digital economy. Let go paperless with dweller.
                 </p>
               </div>
             </div>
@@ -297,7 +312,7 @@ const Index = () => {
             id="key-offerings"
             className="text-primary-base dark:text-[#6489d0] text-center font-bold text-xl lg:text-3xl"
           >
-            Key Offerings{" "}
+            Our Offerings{" "}
           </h2>
           <div className="flex-col lg:items-center lg:flex-row flex lg:text-left lg:space-x-16 pt-4 lg:pt-12 max-w-6xl lg:px-8 mx-auto">
             <div className="order-2 lg:order-1 lg:w-[50%] grid gap-y-6 lg:gap-y-12 content-start px-4 lg:px-0">
@@ -369,8 +384,6 @@ const Index = () => {
                     src="https://res.cloudinary.com/themachine/image/upload/v1660630058/commune-web/public/HowItWorks_jmmcor.png"
                     className="w-full h-full"
                     style={{
-                      //   height: 1,
-                      //   width: 1,
                       display: "inline-block",
                       pointerEvents: "none",
                     }}
@@ -381,29 +394,31 @@ const Index = () => {
             <div className="mt-8 lg:mt-28 lg:w-[min(40rem,50%)] lg:max-w-lg px-4 lg:px-0 grid gap-y-8 lg:gap-y-16 content-start">
               <div>
                 <h3 className="text-primary-base dark:text-[#6489d0] font-semibold lg:text-xl mb-1 lg:mb-2">
-                  Search For An Apartment
+                  Managers
                 </h3>
                 <p>
-                  Run a quick search for apartments based on your unique
-                  preferences.
+                  Sign up on the web app, choose your real estate field and
+                  start enjoying your digital workspace.
                 </p>
               </div>
               <div>
                 <h3 className="text-primary-base dark:text-[#6489d0] font-semibold lg:text-xl mb-1 lg:mb-2">
-                  Inspect Homes Virtually
+                  Casual Users
                 </h3>
                 <p>
-                  Using our realtime solutions, virtually inspect houses without
-                  making expensive physical visits.{" "}
+                  Users (Residents and Agents), download our app from play store
+                  or app store and follow the steps to get set up. Find
+                  properties, Join communities, connect with the world around
+                  you and make payments swiftly.{" "}
                 </p>
               </div>
               <div>
                 <h3 className="text-primary-base dark:text-[#6489d0] font-semibold lg:text-xl mb-1 lg:mb-2">
-                  Pay
+                  Issues?
                 </h3>
                 <p>
-                  Once you are satisfied, make your payment via the secure
-                  in-app payment channel.
+                  For any issues on settin up an account, kindly reach out to us
+                  on <span className="text">support@dweller.africa</span>
                 </p>
               </div>
             </div>
@@ -692,10 +707,14 @@ const Index = () => {
             </button>
           </div>
         </section>
-        <footer className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 text-[13px] mt-24">
+        <footer className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 pb-10 text-[13px] mt-24">
           <div className="grid sm:grid-cols-2 gap-y-10 lg:flex justify-between">
             <div>
-              <img src={monnifyLogo} alt="monify logo" />
+              <img
+                className="max-w-[200px]"
+                src={dwellerLogo}
+                alt="dweller logo"
+              />
             </div>
             <div>
               <p className="capitalize font-semibold text-base mb-4">
