@@ -45,20 +45,20 @@ const Header = () => {
           <nav>
             <ul className="flex items-center space-x-11">
               <li>
-                <a href="https://www.getcommune.co/#about-us">About Us</a>
+                <a href="#about-us">About Us</a>
               </li>
               <li>
-                <a href="https://www.getcommune.co/#key-offerings">Services</a>
+                <a href="#services">Services</a>
               </li>
               <li>
-                <a href="https://www.getcommune.co/#contact-us">Contact Us</a>
+                <a href="#footer">Contact Us</a>
               </li>
             </ul>
           </nav>
           <button
             onClick={() => navigate("/payment")}
             type="button"
-            className="bg-customBlue fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
+            className="bg-appcolor-500 fill-before px-8 py-3 text-white text-lg rounded-lg font-semibold cursor-pointer"
             data-v-682d5bac=""
           >
             {" "}
@@ -121,15 +121,15 @@ const Header = () => {
               <nav>
                 <ul className="flex flex-col gap-10">
                   <li>
-                    <a href="https://www.getcommune.co/#about-us">About Us</a>
+                    <a href="#about-us">About Us</a>
                   </li>
                   <li>
-                    <a href="https://www.getcommune.co/#key-offerings">
+                    <a href="#services">
                       Services
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.getcommune.co/#contact-us">
+                    <a href="#footer">
                       Contact Us
                     </a>
                   </li>
@@ -138,7 +138,7 @@ const Header = () => {
               <button
                 onClick={() => navigate("/payment")}
                 type="button"
-                className=" bg-customBlue fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
+                className=" bg-appcolor-500 fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
                 data-v-682d5bac=""
               >
                 {" "}

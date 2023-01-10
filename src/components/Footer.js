@@ -4,7 +4,7 @@ import dwellerLogo from "../assets/dweller-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 pb-10 text-[13px] mt-24">
+    <footer id='footer' className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 pb-16 text-[13px] mt-24">
       <div className="grid sm:grid-cols-2 gap-y-10 lg:flex justify-between">
         <div>
           <img className="max-w-[200px]" src={dwellerLogo} alt="dweller logo" />
@@ -44,12 +44,12 @@ const Footer = () => {
             <li>
               {" "}
               <a href="#">
-                Lorem ipsum dolor sit amet consectutur, Abuja, Nigeria
+                29 Ndjamena crescent, Aminu Kano crescent, Wuse 2, beside <br className="hidden sm:block" /> GTBank Abuja
               </a>
             </li>
             <li>
               {" "}
-              <a href="#">support@teamlead.com</a>
+              <a href="#">support@dweller.africa</a>
             </li>
           </ul>
         </div>
@@ -107,7 +107,7 @@ const Footer = () => {
               </svg>
             </li>
           </ul>
-          <div className="mt-10 flex flex-col gap-3">
+          {/* <div className="mt-10 flex flex-col gap-3">
             <p>
               Stay Excited, <br /> Subscribe to Our Newsletter
             </p>
@@ -121,20 +121,8 @@ const Footer = () => {
                 <span className="text-xl">&rarr;</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-      </div>
-      <div className="max-w-6xl mx-auto mt-20 text-center opacity-50">
-        <p>© 2021 TeamLead, Ltd. All rights reserved</p>
-        <p className="mt-5 text-justify sm:text-center">
-          © 2018 TeamApt, Ltd. All rights reserved All text, graphics, audio
-          files, code, downloadable material, and other works on this web site
-          are the copyrighted works of TeamApt, Inc. All Rights Reserved. Any
-          unauthorized redistribution or reproduction of any copyrighted
-          materials on this web site is strictly prohibited. Other product and
-          company names are trademarks of their respective owners. This web site
-          contains simulated images; actual appearance may vary.
-        </p>
       </div>
     </footer>
   );

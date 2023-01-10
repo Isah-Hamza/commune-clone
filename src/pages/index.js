@@ -7,13 +7,14 @@ import globe from "../assets/Globe_qi8why.png";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import AboutUs from "../components/AboutUs";
+import HowItWorks from "../components/HowItWorks";
+
 import KeyOfferings from "../components/KeyOfferings";
 import OurPartners from "../components/OurPartners";
 import ContactUs from "../components/ContactUs";
 
 const Index = () => {
   const navigate = useNavigate();
-
   return (
     <div>
       <div
@@ -48,20 +49,25 @@ const Index = () => {
           </div>
           <div className="lg:px-16 flex-col lg:flex-row flex lg:pt-40 text-center lg:text-left lg:space-x-4">
             <div className="lg:max-w-[min(33rem,55%)] order-2 lg:order-1 px-4 lg:px-0">
-              <h2 className="text-primary-base dark:text-[#6489d0] font-bold text-2xl lg:text-4xl">
+              <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-4xl lg:!leading-[1.35] ">
                 {" "}
-                Powering digitization of the real estate ecosystem{" "}
+                Bringing people together, through technology.{" "}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg mt-4 lg:mt-6 opacity-90">
-                {" "}
+                {/* {" "}
                 Craeting value through digitization of properties. With dweller,
                 you can now manage your properties, make payments effortless and
-                live connectedly{" "}
+                live connectedly{" "} */}
+                Welcome to Dweller, the comprehensive property management
+                software that helps you streamline your work and better serve
+                your community. Listing your properties to find potential
+                customer (either to buy or rent) has also being made easy with
+                Dweller
               </p>
               <button
                 onClick={() => navigate("/payment")}
                 type="button"
-                className="relative isolate bg-customBlue px-10 py-4 text-white text-base rounded-lg font-semibold mt-5 cursor-pointer"
+                className="relative isolate bg-appcolor-500 px-10 py-4 text-white text-base rounded-lg font-semibold mt-7 cursor-pointer"
               >
                 {" "}
                 Get Early Access{" "}
@@ -82,67 +88,11 @@ const Index = () => {
           </div>
         </section>
         <AboutUs />
-        <KeyOfferings />
-        <section className="relative isolate mt-16 xl:mt-28 lg:mt-40">
-          <h2
-            id="how-it-works"
-            className="text-primary-base dark:text-[#6489d0] text-center font-bold text-xl lg:text-3xl"
-          >
-            How It Works{" "}
-          </h2>
-          <div className="flex-col lg:flex-row flex lg:text-left lg:space-x-4 pt-4 lg:pt-8">
-            <div className="lg:w-[50%]">
-              <div className="flex justify-center desktop-md:justify-start">
-                <span className="w-[min(32rem,50vw)] inline-block">
-                  <img
-                    alt="how it works"
-                    aria-label="Image"
-                    src="https://res.cloudinary.com/themachine/image/upload/v1660630058/commune-web/public/HowItWorks_jmmcor.png"
-                    className="w-full h-full"
-                    style={{
-                      display: "inline-block",
-                      pointerEvents: "none",
-                    }}
-                  />
-                </span>
-              </div>
-            </div>
-            <div className="mt-8 lg:mt-28 lg:w-[min(40rem,50%)] lg:max-w-lg px-4 lg:px-0 grid gap-y-8 lg:gap-y-16 content-start">
-              <div>
-                <h3 className="text-primary-base dark:text-[#6489d0] font-semibold lg:text-xl mb-1 lg:mb-2">
-                  Managers
-                </h3>
-                <p>
-                  Sign up on the web app, choose your real estate field and
-                  start enjoying your digital workspace.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-primary-base dark:text-[#6489d0] font-semibold lg:text-xl mb-1 lg:mb-2">
-                  Casual Users
-                </h3>
-                <p>
-                  Users (Residents and Agents), download our app from play store
-                  or app store and follow the steps to get set up. Find
-                  properties, Join communities, connect with the world around
-                  you and make payments swiftly.{" "}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-primary-base dark:text-[#6489d0] font-semibold lg:text-xl mb-1 lg:mb-2">
-                  Issues?
-                </h3>
-                <p>
-                  For any issues on settin up an account, kindly reach out to us
-                  on <span className="text">support@dweller.africa</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <OurPartners />
-        <ContactUs />
-        <section className="grid justify-center mb-8">
+        {/* <KeyOfferings /> */}
+        <HowItWorks />
+        {/* <OurPartners /> */}
+        {/* <ContactUs /> */}
+        <section className="grid justify-center mb-8 mt-24">
           <p className="text-heading mb-6 text-lg text-center font-semibold">
             {" "}
             Available soon on{" "}
