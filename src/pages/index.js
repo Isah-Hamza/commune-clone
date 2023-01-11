@@ -1,6 +1,7 @@
-import React from "react";
+import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
+import { IoCloseOutline } from "react-icons/io5";
 
 import globe from "../assets/Globe_qi8why.png";
 
@@ -15,6 +16,8 @@ import ContactUs from "../components/ContactUs";
 
 const Index = () => {
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <div
@@ -22,7 +25,7 @@ const Index = () => {
         className="h-full w-full overflow-x-hidden text-sm sm:text-base"
       >
         <div className="h-[1px] mt-[1px] lg:mt-8"></div>
-        <Header />
+        <Header {...{ setShowModal }} />
         <section className="relative isolate mt-[72px] desktop-md:mt-[unset]">
           <div className="absolute -z-1 top-[-8rem]">
             <svg
@@ -65,7 +68,8 @@ const Index = () => {
                 Dweller
               </p>
               <button
-                onClick={() => navigate("/payment")}
+                onClick={() => setShowModal(true)}
+                // onClick={() => navigate("/payment")}
                 type="button"
                 className="relative isolate bg-appcolor-500 px-10 py-4 text-white text-base rounded-lg font-semibold mt-7 cursor-pointer"
               >
@@ -130,6 +134,32 @@ const Index = () => {
           </div>
         </section>
         <Footer />
+        {showModal ? (
+          <div className="grid place-content-center z-10 fixed inset-0 bg-black/50 ">
+            <div className=" bg-white rounded m-auto w-[95%] sm:w-[400px] p-16 px-6 text-center relative">
+              <IoCloseOutline
+                onClick={() => setShowModal(false)}
+                size={22}
+                className="absolute right-4 top-4 cursor-pointer opacity-70 hover:opacity-100"
+              />
+              <p className="font-semibold text-center">Contact Dweller</p>
+              <p className="text-center mb-3 text-sm">
+                You can contact the team at Dweller through the following
+                outlet.
+              </p>
+              <div className="mt-10 text-center">
+                <p className="flex items-center justify-center gap-1 text-center">
+                  <span className="font-semibold">Phone: </span>
+                  <p>08162283793</p>
+                </p>
+                <p className="flex items-center justify-center gap-1 ">
+                  <span className="font-semibold">Email: </span>
+                  <p>support@dweller.africa</p>
+                </p>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

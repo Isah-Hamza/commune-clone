@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import dwellerLogo from "../assets/dweller-logo.png";
 
-const Header = () => {
+const Header = ({ setShowModal }) => {
   const [scrollHeight, setScrollHeight] = useState(0);
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const navigate = useNavigate();
@@ -56,7 +56,8 @@ const Header = () => {
             </ul>
           </nav>
           <button
-            onClick={() => navigate("/payment")}
+            onClick={() => setShowModal(true)}
+            // onClick={() => navigate("/payment")}
             type="button"
             className="bg-appcolor-500 fill-before px-8 py-3 text-white text-lg rounded-lg font-semibold cursor-pointer"
             data-v-682d5bac=""
@@ -124,19 +125,16 @@ const Header = () => {
                     <a href="#about-us">About Us</a>
                   </li>
                   <li>
-                    <a href="#services">
-                      Services
-                    </a>
+                    <a href="#services">Services</a>
                   </li>
                   <li>
-                    <a href="#footer">
-                      Contact Us
-                    </a>
+                    <a href="#footer">Contact Us</a>
                   </li>
                 </ul>
               </nav>
               <button
-                onClick={() => navigate("/payment")}
+                onClick={() => setShowModal(true)}
+                // onClick={() => navigate("/payment")}
                 type="button"
                 className=" bg-appcolor-500 fill-before px-10 py-4 text-white text-lg rounded-lg font-semibold cursor-pointer"
                 data-v-682d5bac=""
