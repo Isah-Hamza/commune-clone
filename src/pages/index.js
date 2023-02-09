@@ -3,16 +3,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
 
-import globe from "../assets/Globe_qi8why.png";
-
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import AboutUs from "../components/AboutUs";
 import HowItWorks from "../components/HowItWorks";
-
-import KeyOfferings from "../components/KeyOfferings";
-import OurPartners from "../components/OurPartners";
-import ContactUs from "../components/ContactUs";
+import guyWithPhone from "../assets/Dweller-Guy-with-phone01.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -51,21 +46,28 @@ const Index = () => {
             </svg>
           </div>
           <div className="lg:px-16 flex-col lg:flex-row flex lg:pt-40 text-center lg:text-left lg:space-x-4">
-            <div className="lg:max-w-[min(33rem,55%)] order-2 lg:order-1 px-4 lg:px-0">
+            <div className="lg:max-w-[550px] order-2 lg:order-1 px-4 lg:px-0">
               <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-4xl lg:!leading-[1.35] ">
                 {" "}
-                Bringing people together, through technology.{" "}
+                <p className="whitespace-nowrap">Connecting People, </p>
+                <p className="whitespace-nowrap">
+                  Properties and Solutions
+                </p>{" "}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg mt-4 lg:mt-6 opacity-90">
                 {/* {" "}
                 Craeting value through digitization of properties. With dweller,
                 you can now manage your properties, make payments effortless and
                 live connectedly{" "} */}
-                Welcome to Dweller, the comprehensive property management
+                {/* Welcome to Dweller, the comprehensive property management
                 software that helps you streamline your work and better serve
                 your community. Listing your properties to find potential
                 customer (either to buy or rent) has also being made easy with
-                Dweller
+                Dweller */}
+                Revolutionalize property managment by porviding property owners
+                and all players involved in the process with a comprehensive and
+                integrated platform that simplifies the managment process and
+                provides a seamless experience.
               </p>
               <button
                 onClick={() => setShowModal(true)}
@@ -77,16 +79,16 @@ const Index = () => {
                 Get Early Access{" "}
               </button>
             </div>
-            <div className="lg:-mt-14 order-1 lg:order-2 mb-10">
+            <div className="order-1 lg:order-2 mb-10 -mt-20 lg:ml-auto">
               <div className="flex justify-center lg:justify-end">
-                <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block">
-                  <img
-                    src={globe}
-                    alt="Globes"
-                    className="Img"
-                    style={{ "--transition": "opacity 200ms linear 0ms" }}
-                  />
-                </span>
+                {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
+                <img
+                  src={guyWithPhone}
+                  alt="Globes"
+                  className="Img max-w-[500px]"
+                  style={{ "--transition": "opacity 200ms linear 0ms" }}
+                />
+                {/* </span> */}
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import about_us from '../assets/dd5.png';
+import about_us from "../assets/dd5.png";
 
 const AboutUs = () => {
   return (
@@ -23,13 +23,13 @@ const AboutUs = () => {
                 className="w-full h-full "
                 style={{
                   display: "inline-block",
-                  pointerEvents: "none",
+                  pointerEvents: "none"
                 }}
               />
             </span>
           </div>
         </div>
-        <div className="mt-8 lg:mt-20 lg:w-[min(40rem,50%)] lg:max-w-lg px-4 lg:px-0">
+        <div className="mt-8 lg:mt-28 lg:w-[min(40rem,50%)] lg:max-w-lg px-4 lg:px-0">
           <h3 className="font-semibold text-xl lg:text-2xl mb-7 lg:mb-9 text-appcolor-500">
             {" "}
             Real Estate solutions for modern Africa{" "}
@@ -37,13 +37,13 @@ const AboutUs = () => {
           <div className="grid gap-y-4 lg:gap-y-6">
             <p>
               {" "}
-              We create a central infrastructure for day-to-day activities in
-              the real estate community. These activities range from finding
-              properties, Easy access to Property Finacing, Property Management,
-              Property Insurance, real estate agencies, Digital Community
-              Living, and promoting shared community.{" "}
+              At Dweller, we are integrating technology into property operations
+              from finding properties, managing properties, financing
+              properties, connecting to major property infrastructure to give
+              our users a the best experience in managing thier homes and
+              properties.
             </p>
-            <p>
+            {/* <p>
               {" "}
               We believe that properties can be represented with digital
               representation and this can promote next evolution of the reasl
@@ -52,7 +52,7 @@ const AboutUs = () => {
             <p>
               Sign up today on dweller to tap into the power of of the digital
               economy. Let go paperless with dweller.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

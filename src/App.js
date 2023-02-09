@@ -7,6 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Index />} />
+        
         <Route path="/payment" element={<PaymentConfirmation />} />
       </Routes>
     </Router>
