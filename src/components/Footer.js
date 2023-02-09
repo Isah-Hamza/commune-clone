@@ -10,32 +10,29 @@ const Footer = () => {
           <img className="max-w-[200px]" src={dwellerLogo} alt="dweller logo" />
         </div>
         <div>
-          <p className="capitalize font-semibold text-base mb-4">products</p>
+          <p className="capitalize font-semibold text-base mb-4">Links</p>
           <ul className="flex flex-col gap-3">
             <li>
               {" "}
-              <a href="#">Pricing</a>
+              <a href="#">FAQ</a>
             </li>
             <li>
               {" "}
-              <a href="#">Frequently Asked Questions</a>
+              <a href="#">Dweller For Managers</a>
             </li>
             <li>
               {" "}
-              <a href="#">Contacts</a>
+              <a href="#">Dweller For Residents</a>
             </li>
             <li>
               {" "}
-              <a href="#">Terms of Privacy</a>
+              <a href="#">Privacy Policy</a>
             </li>
             <li>
               {" "}
-              <a href="#">Privacy Policies</a>
+              <a href="#">Support</a>
             </li>
-            <li>
-              {" "}
-              <a href="#">Dispute Resolution</a>
-            </li>
+          
           </ul>
         </div>
         <div>
@@ -54,7 +51,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <p className="capitalize font-semibold text-base mb-4">Community</p>
+          <p className="capitalize font-semibold text-base mb-4">Follow Us</p>
           <ul className="flex items-center gap-5">
             <li>
               <svg
