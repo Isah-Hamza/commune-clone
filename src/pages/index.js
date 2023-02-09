@@ -64,9 +64,9 @@ const Index = () => {
                 your community. Listing your properties to find potential
                 customer (either to buy or rent) has also being made easy with
                 Dweller */}
-                Revolutionalize property managment by porviding property owners
+                Revolutionalizing property managment by providing property owners
                 and all players involved in the process with a comprehensive and
-                integrated platform that simplifies the managment process and
+                integrated platform that simplifies the management process and
                 provides a seamless experience.
               </p>
               <button
@@ -79,13 +79,13 @@ const Index = () => {
                 Get Early Access{" "}
               </button>
             </div>
-            <div className="order-1 lg:order-2 mb-10 -mt-20 lg:ml-auto">
-              <div className="flex justify-center md:justify-end">
+            <div className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-20 lg:!ml-auto">
+              <div className="flex justify-center lg:justify-end">
                 {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
                 <img
                   src={guyWithPhone}
                   alt="Globes"
-                  className="Img max-w-[500px]"
+                  className="Img max-w-[500px] w-full md:w:unset"
                   style={{ "--transition": "opacity 200ms linear 0ms" }}
                 />
                 {/* </span> */}
