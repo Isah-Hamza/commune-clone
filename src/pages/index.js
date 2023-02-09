@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import AboutUs from "../components/AboutUs";
 import HowItWorks from "../components/HowItWorks";
-import guyWithPhone from "../assets/Dweller-Guy-with-phone01.png";
+import guyWithPhone from "../assets/Dweller-Guy-with-phone01-min.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -80,7 +80,7 @@ const Index = () => {
               </button>
             </div>
             <div className="order-1 lg:order-2 mb-10 -mt-20 lg:ml-auto">
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center md:justify-end">
                 {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
                 <img
                   src={guyWithPhone}
