@@ -3,38 +3,26 @@ import about_us from "../assets/dd5.png";
 
 const AboutUs = () => {
   return (
-    <section id="about-us" className="relative isolate pt-14 xl:mt-28 lg:mt-40">
+    <section id="about-us" className="relative isolate pt-14 xl:mt-10">
       <h2
+        data-aos="fade-down"
         id="about-us"
-        className="text-primary-base dark:text-appcolor-500 text-center font-bold text-xl lg:text-3xl"
+        className="text-primary-base dark:text-appcolor-500 text-center font-bold text-2xl lg:text-4xl 2xl:text-5xl"
       >
         {" "}
         About Dweller{" "}
       </h2>
       <div className="flex-col justify-center lg:flex-row flex lg:text-left lg:space-x-4 pt-4 lg:pt-8">
-        {/* <div className="lg:w-[50%] ml-0 sm:ml-10 lg:ml-16">
-          <div className="flex justify-center desktop-md:justify-start">
-            <span className="w-[min(32rem,50vw)] inline-block">
-              <img
-                aria-label="Image"
-                alt="about us"
-                src={about_us}
-                // src='../assets/Globe_qi8why.png'
-                className="w-full h-full "
-                style={{
-                  display: "inline-block",
-                  pointerEvents: "none"
-                }}
-              />
-            </span>
-          </div>
-        </div> */}
-        <div className="mx-auto text-center lg:w-[min(40rem,50%)] lg:max-w-lg px-4 lg:px-0">
+        <div className="mx-auto text-center lg:min-w-[950px] lg:max-w-lg px-4 lg:px-0">
           {/* <h3 className="font-semibold text-xl lg:text-2xl mb-7 lg:mb-9 text-appcolor-500">
             {" "}
             Real Estate solutions for modern Africa{" "}
           </h3> */}
-          <div className="grid gap-y-4 lg:gap-y-6">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="200"
+            className="grid gap-y-4 lg:gap-y-6 text-sm sm:text-base lg:text-xl 2xl:text-2xl"
+          >
             <p>
               {" "}
               At Dweller, we are integrating technology into property operations
@@ -43,16 +31,6 @@ const AboutUs = () => {
               our users a the best experience in managing thier homes and
               properties.
             </p>
-            {/* <p>
-              {" "}
-              We believe that properties can be represented with digital
-              representation and this can promote next evolution of the reasl
-              estate community.{" "}
-            </p>
-            <p>
-              Sign up today on dweller to tap into the power of of the digital
-              economy. Let go paperless with dweller.
-            </p> */}
           </div>
         </div>
       </div>

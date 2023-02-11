@@ -5,7 +5,6 @@ import dwellerLogo from "../assets/dweller-logo.png";
 const Header = ({ setShowModal }) => {
   const [scrollHeight, setScrollHeight] = useState(0);
   const [openMobileNav, setOpenMobileNav] = useState(false);
-  const navigate = useNavigate();
 
   const hamburger = useRef(null);
   const closeBtn = useRef(null);
@@ -25,14 +24,14 @@ const Header = ({ setShowModal }) => {
   }, []);
 
   return (
-    <header>
+    <header className="">
       <div
-        className={`hidden desktop-md:block sticky top-0 py-3 ${
+        className={`hidden desktop-md:block sticky top-0 py-3  ${
           scrollHeight > 50 &&
           "bg-[#fffc]/90 border-b !z-10 !fixed !w-full !py-2"
         } backdrop-filter backdrop-blur-xl transition-all duration-400 before:w-full before:absolute before:bottom-0 before:left-0 before:bg-divider dark:before:bg-divider-d before:transition-opacity before:opacity-0`}
       >
-        <div className="px-4 lg:px-16 flex items-center justify-between">
+        <div className="px-4 lg:px-16 2xl:px-0 flex items-center justify-between mx-auto max-w-[1440px]">
           <a href="#/">
             <img
               className="translate-y-[18px] w-36"

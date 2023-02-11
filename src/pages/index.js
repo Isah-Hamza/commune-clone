@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import AboutUs from "../components/AboutUs";
 import HowItWorks from "../components/HowItWorks";
 import guyWithPhone from "../assets/Dweller-Guy-with-phone01-min.png";
+import { SlMouse } from "react-icons/sl";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -20,8 +21,11 @@ const Index = () => {
         className="h-full w-full overflow-x-hidden text-sm sm:text-base"
       >
         <div className="h-[1px] mt-[1px] lg:mt-8"></div>
+        <a href="#footer" className="z-[1000] absolute bottom-5 cursor-pointer left-1/2 -translate-x-1/2 w-fit animate-bounce">
+          <SlMouse size={50} />
+        </a>
         <Header {...{ setShowModal }} />
-        <section className="relative isolate mt-[72px] desktop-md:mt-[unset]">
+        <section className="relative isolate mt-[72px] desktop-md:mt-[unset] mx-auto max-w-[1550px]">
           <div className="absolute -z-1 top-[-8rem]">
             <svg
               width="728"
@@ -45,29 +49,24 @@ const Index = () => {
               ></path>
             </svg>
           </div>
-          <div className="lg:px-16 flex-col lg:flex-row flex lg:pt-40 text-center lg:text-left lg:space-x-4">
-            <div className="lg:max-w-[550px] order-2 lg:order-1 px-4 lg:px-0">
-              <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-4xl lg:!leading-[1.35] ">
+          <div className="lg:px-16 flex-col lg:flex-row flex lg:pt-48 text-center lg:text-left lg:space-x-4">
+            <div
+              data-aos="fade-down"
+              data-aos-offset="50"
+              className="lg:max-w-[600px] order-2 lg:order-1 px-4 lg:px-0 lg:-mt-16"
+            >
+              <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-5xl lg:!leading-[1.35] ">
                 {" "}
                 <p className="whitespace-nowrap">Connecting People, </p>
                 <p className="whitespace-nowrap">
                   Properties and Solutions
                 </p>{" "}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg mt-4 lg:mt-6 opacity-90">
-                {/* {" "}
-                Craeting value through digitization of properties. With dweller,
-                you can now manage your properties, make payments effortless and
-                live connectedly{" "} */}
-                {/* Welcome to Dweller, the comprehensive property management
-                software that helps you streamline your work and better serve
-                your community. Listing your properties to find potential
-                customer (either to buy or rent) has also being made easy with
-                Dweller */}
-                Revolutionalizing property managment by providing property owners
-                and all players involved in the process with a comprehensive and
-                integrated platform that simplifies the management process and
-                provides a seamless experience.
+              <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl mt-4 lg:mt-6 opacity-90">
+                Revolutionalizing property managment by providing property
+                owners and all players involved in the process with a
+                comprehensive and integrated platform that simplifies the
+                management process and provides a seamless experience.
               </p>
               <button
                 onClick={() => setShowModal(true)}
@@ -79,13 +78,17 @@ const Index = () => {
                 Get Early Access{" "}
               </button>
             </div>
-            <div className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-20 lg:!ml-auto">
+            <div
+              data-aos="slide-up"
+              data-aos-offset="50"
+              className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-40 lg:!ml-auto"
+            >
               <div className="flex justify-center lg:justify-end">
                 {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
                 <img
                   src={guyWithPhone}
                   alt="Globes"
-                  className="Img max-w-[500px] w-full md:w:unset"
+                  className="Img max-w-[650px] 2xl:max-w-[750px] w-full md:w:unset"
                   style={{ "--transition": "opacity 200ms linear 0ms" }}
                 />
                 {/* </span> */}
@@ -99,12 +102,17 @@ const Index = () => {
         {/* <OurPartners /> */}
         {/* <ContactUs /> */}
         <section className="grid justify-center mb-8 mt-24">
-          <p className="text-heading mb-6 text-lg text-center font-semibold">
+          <p
+            data-aos="fade-down"
+            data-aos-offset="100"
+            className="text-lg mb-6 md:text-2xl text-center font-semibold"
+          >
             {" "}
             Available soon on{" "}
           </p>
           <div className="grid md:grid-cols-2 w-full md:max-w-lg gap-5 md:gap-8">
             <button
+              data-aos="fade-right"
               color="#fff"
               className="Button fill-before !p-0 max-w-[75vw] max-h-[4rem] !bg-transparent"
               href=""
@@ -120,6 +128,7 @@ const Index = () => {
               />
             </button>
             <button
+              data-aos="fade-left"
               type="button"
               color="#fff"
               className="Button fill-before !p-0 max-w-[75vw] max-h-[4rem] !bg-transparent"

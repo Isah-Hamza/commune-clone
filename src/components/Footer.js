@@ -5,7 +5,7 @@ import dwellerLogo from "../assets/dweller-logo.png";
 const Footer = () => {
   return (
     <footer id='footer' className="bg-[#e1e7eb] px-5 sm:px-10 xl:px-20 py-20 pb-16 text-[13px] mt-24">
-      <div className="grid sm:grid-cols-2 gap-y-10 lg:flex justify-between">
+      <div className="grid sm:grid-cols-2 gap-y-10 lg:flex justify-between mx-auto max-w-[1440px]">
         <div>
           <img className="max-w-[200px]" src={dwellerLogo} alt="dweller logo" />
         </div>
