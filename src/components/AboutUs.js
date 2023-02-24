@@ -3,7 +3,7 @@ import about_us from "../assets/dd5.png";
 
 const AboutUs = () => {
   return (
-    <section id="about-us" className="relative isolate pt-14 xl:mt-10">
+    <section id="about-us" className="relative isolate pt-14 xl:mt-16">
       <h2
         data-aos="fade-down"
         id="about-us"

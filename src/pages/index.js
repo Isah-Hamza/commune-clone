@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
 
 import Footer from "../components/Footer";
@@ -8,11 +7,36 @@ import Header from "../components/Header";
 import AboutUs from "../components/AboutUs";
 import HowItWorks from "../components/HowItWorks";
 import guyWithPhone from "../assets/Dweller-Guy-with-phone01-min.png";
+import dwellerProduct from "../assets/Dweller-product.png";
 import { SlMouse } from "react-icons/sl";
 
 const Index = () => {
-  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
+
+  let initalIndex = 0;
+  let timeout;
+  function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("dec-item");
+    console.log("slides", slides);
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    initalIndex++;
+    if (initalIndex > slides.length) {
+      initalIndex = 1;
+    }
+    console.log("init index", initalIndex);
+    slides[initalIndex - 1].style.display = "block";
+    timeout = setTimeout(carousel, 8000); // Change image every 8 seconds
+  }
+
+  useEffect(() => {
+    carousel();
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <div>
@@ -21,7 +45,10 @@ const Index = () => {
         className="h-full w-full overflow-x-hidden text-sm sm:text-base"
       >
         <div className="h-[1px] mt-[1px] lg:mt-8"></div>
-        <a href="#footer" className="z-[1000] absolute bottom-5 cursor-pointer left-1/2 -translate-x-1/2 w-fit animate-bounce">
+        <a
+          href="#footer"
+          className="z-[1000] absolute bottom-5 cursor-pointer left-1/2 -translate-x-1/2 w-fit animate-bounce"
+        >
           <SlMouse size={50} />
         </a>
         <Header {...{ setShowModal }} />
@@ -55,7 +82,7 @@ const Index = () => {
               data-aos-offset="50"
               className="lg:max-w-[600px] order-2 lg:order-1 px-4 lg:px-0 lg:-mt-16"
             >
-              <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-5xl lg:!leading-[1.35] ">
+              <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-5xl lg:!leading-[1.25] ">
                 {" "}
                 <p className="whitespace-nowrap">Connecting People, </p>
                 <p className="whitespace-nowrap">
@@ -79,9 +106,9 @@ const Index = () => {
               </button>
             </div>
             <div
-              data-aos="slide-up"
+              // data-aos="slide-up"
               data-aos-offset="50"
-              className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-40 lg:!ml-auto"
+              className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-40 lg:!ml-auto slide-up-fade-in dec-item"
             >
               <div className="flex justify-center lg:justify-end">
                 {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
@@ -89,6 +116,22 @@ const Index = () => {
                   src={guyWithPhone}
                   alt="Globes"
                   className="Img max-w-[650px] 2xl:max-w-[750px] w-full md:w:unset"
+                  style={{ "--transition": "opacity 200ms linear 0ms" }}
+                />
+                {/* </span> */}
+              </div>
+            </div>
+            <div
+              // data-aos="slide-up"
+              data-aos-offset="50"
+              className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-56 lg:!ml-auto slide-up-fade-in dec-item"
+            >
+              <div className="flex justify-center lg:justify-end">
+                {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
+                <img
+                  src={dwellerProduct}
+                  alt="Globes"
+                  className="Img max-w-[500px] 2xl:max-w-[750px] w-full md:w:unset"
                   style={{ "--transition": "opacity 200ms linear 0ms" }}
                 />
                 {/* </span> */}

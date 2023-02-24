@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
   scroll-padding-top: 105px;
   scroll-behavior: smooth;
 }
@@ -25,6 +28,46 @@ code {
     monospace;
 }
 
-.item, .slick-list, .slick-track {
+.item,
+.slick-list,
+.slick-track {
   box-shadow: 0 0 25px -20px !important;
+}
+
+.green {
+  background: url("assets/Green.png") !important;
+  background-position: 0px !important;
+}
+
+.purple {
+  background: url("assets/Purple.png") !important;
+  background-position: 0px !important;
+}
+
+.blue {
+  background: url("assets/Blue.png") !important;
+  background-position: 0px !important;
+}
+
+.darkBlue {
+  background: url("assets/Darkblue.png") !important;
+  background-position: 0px !important;
+}
+
+.slide-up-fade-in {
+  animation: slide-up-fade-in ease 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode: forwards; /*when the spec is finished*/
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
