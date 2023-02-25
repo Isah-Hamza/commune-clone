@@ -13,7 +13,7 @@ const HowItWorks = () => {
       >
         Our Solutions{" "}
       </h2>
-      <div className="mx-auto md:mx-[unset] grid md:grid-cols-2 gap-6 md:gap-10 mt-10">
+      <div className="mx-auto max-w-5xl grid md:grid-cols-2 gap-6 md:gap-10 mt-10">
         <div
           data-aos="fade-down-right"
           className={`min-h-40 border rounded purple`}

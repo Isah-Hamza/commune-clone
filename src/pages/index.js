@@ -80,7 +80,7 @@ const Index = () => {
             <div
               data-aos="fade-down"
               data-aos-offset="50"
-              className="lg:max-w-[600px] order-2 lg:order-1 px-4 lg:px-0 lg:-mt-16"
+              className="lg:max-w-[600px] order-2 lg:order-1 px-4 lg:px-0 lg:-mt-16 -2xl:mt-10"
             >
               <h2 className="leading-[1.5] text-primary-base dark:text-appcolor-500 font-bold text-2xl lg:text-5xl lg:!leading-[1.25] ">
                 {" "}
@@ -108,7 +108,7 @@ const Index = () => {
             <div
               // data-aos="slide-up"
               data-aos-offset="50"
-              className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-40 lg:!ml-auto slide-up-fade-in dec-item"
+              className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-48 lg:!ml-auto slide-up-fade-in dec-item"
             >
               <div className="flex justify-center lg:justify-end">
                 {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
@@ -131,7 +131,7 @@ const Index = () => {
                 <img
                   src={dwellerProduct}
                   alt="Globes"
-                  className="Img max-w-[500px] 2xl:max-w-[750px] w-full md:w:unset"
+                  className="Img max-w-[500px] w-full md:w:unset"
                   style={{ "--transition": "opacity 200ms linear 0ms" }}
                 />
                 {/* </span> */}
