@@ -13,10 +13,10 @@ const HowItWorks = () => {
       >
         Our Solutions{" "}
       </h2>
-      <div className="mx-auto max-w-5xl grid md:grid-cols-2 gap-6 md:gap-10 mt-10">
+      <div className="mx-auto grid md:grid-cols-2 gap-6 md:gap-10 mt-10">
         <div
           data-aos="fade-down-right"
-          className={`min-h-40 border rounded purple`}
+          className={`min-h-40 rounded-lg purple`}
         >
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
             <p className="text-lg font-semibold">Dweller Manager</p>
@@ -25,16 +25,16 @@ const HowItWorks = () => {
               landlords to manage all property-related operations, including
               property management, community management, staff management,
               visitor management, bill collection management, security and
-              emergency management, smart asset management, and more.
+              emergency management, and more.
             </p>
-            <button className="text-sm px-5 py-2 rounded bg-appcolor-600 text-white">
+            <button className="shadow-xl text-sm px-7 py-2 rounded bg-gray-200 text-black hover:bg-appcolor-600 hover:text-white transition-all duration-500 ease-in-out">
               Login
             </button>
           </div>
         </div>
         <div
           data-aos="fade-down-left"
-          className={`min-h-40 border rounded green`}
+          className={`min-h-40 rounded-lg green`}
         >
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
             <p className="text-lg font-semibold">Dweller Finance</p>
@@ -45,14 +45,15 @@ const HowItWorks = () => {
               validate their investments, manage their customers, and auto-debit
               payments using payment instructions.
             </p>
-            <button className="text-sm px-5 py-2 rounded bg-appcolor-600 text-white">
+            <button className="shadow-lg text-sm px-5 py-2 rounded bg-gray-200
+             text-black">
               Coming Soon
             </button>
           </div>
         </div>
         <div
           data-aos="fade-up-right"
-          className={`min-h-40 border rounded blue`}
+          className={`min-h-40 rounded-lg blue`}
         >
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
             <p className="text-lg font-semibold">Dweller RealEstate</p>
@@ -63,14 +64,15 @@ const HowItWorks = () => {
               Dweller Finance, providing a seamless flow of operations for all
               players involved in the property management process.
             </p>
-            <button className="text-sm px-5 py-2 rounded bg-appcolor-600 text-white">
+            <button className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
+             text-black">
               Coming Soon
             </button>
           </div>
         </div>
         <div
           data-aos="fade-up-left"
-          className={`min-h-40 border rounded darkBlue`}
+          className={`min-h-40 rounded-lg darkBlue`}
         >
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
             <p className="text-lg font-semibold">Dweller Finance</p>
@@ -81,7 +83,8 @@ const HowItWorks = () => {
               Dweller Finance, providing a seamless flow of operations for all
               players involved in the property management process.
             </p>
-            <button className="text-sm px-5 py-2 rounded bg-appcolor-900 text-white">
+            <button className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
+             text-black">
               Coming Soon
             </button>
           </div>
