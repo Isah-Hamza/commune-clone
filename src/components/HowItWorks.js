@@ -1,4 +1,7 @@
 import React from "react";
+import { FcBriefcase, FcCustomerSupport, FcManager } from "react-icons/fc";
+import { TfiWallet } from "react-icons/tfi";
+import { FcHome } from "react-icons/fc";
 
 const HowItWorks = () => {
   return (
@@ -19,7 +22,10 @@ const HowItWorks = () => {
           className={`min-h-40 rounded-lg purple`}
         >
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
-            <p className="text-lg font-semibold">Dweller Manager</p>
+            <p className="flex items-center gap-1.5 text-lg md:text-[22px] font-bold">
+              <FcManager />
+              Dweller Manager
+            </p>
             <p>
               This is an all-in-one application for facility companies and
               landlords to manage all property-related operations, including
@@ -32,12 +38,12 @@ const HowItWorks = () => {
             </button>
           </div>
         </div>
-        <div
-          data-aos="fade-down-left"
-          className={`min-h-40 rounded-lg green`}
-        >
+        <div data-aos="fade-down-left" className={`min-h-40 rounded-lg green`}>
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
-            <p className="text-lg font-semibold">Dweller Finance</p>
+            <p className="flex items-center gap-2 text-lg md:text-[22px] font-semibold">
+              <FcBriefcase color="coral" />
+              Dweller Finance
+            </p>
             <p>
               This is an application for financiers to connect directly to the
               market and third-party companies like real estate companies. With
@@ -45,18 +51,20 @@ const HowItWorks = () => {
               validate their investments, manage their customers, and auto-debit
               payments using payment instructions.
             </p>
-            <button className="shadow-lg text-sm px-5 py-2 rounded bg-gray-200
-             text-black">
+            <button
+              className="shadow-lg text-sm px-5 py-2 rounded bg-gray-200
+             text-black"
+            >
               Coming Soon
             </button>
           </div>
         </div>
-        <div
-          data-aos="fade-up-right"
-          className={`min-h-40 rounded-lg blue`}
-        >
+        <div data-aos="fade-up-right" className={`min-h-40 rounded-lg blue`}>
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
-            <p className="text-lg font-semibold">Dweller RealEstate</p>
+            <p className="flex gap-2 items-center text-lg md:text-[22px] font-semibold">
+              <FcHome />
+              Dweller RealEstate
+            </p>
             <p>
               This is an application for real estate companies to manage the
               process of acquiring properties and generating leads for potential
@@ -64,18 +72,20 @@ const HowItWorks = () => {
               Dweller Finance, providing a seamless flow of operations for all
               players involved in the property management process.
             </p>
-            <button className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
-             text-black">
+            <button
+              className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
+             text-black"
+            >
               Coming Soon
             </button>
           </div>
         </div>
-        <div
-          data-aos="fade-up-left"
-          className={`min-h-40 rounded-lg darkBlue`}
-        >
+        <div data-aos="fade-up-left" className={`min-h-40 rounded-lg darkBlue`}>
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
-            <p className="text-lg font-semibold">Dweller Finance</p>
+            <p className="flex items-center gap-2 text-lg md:text-[22px] font-semibold">
+              <FcCustomerSupport />
+              Dweller Finance
+            </p>
             <p>
               This is an application for real estate companies to manage the
               process of acquiring properties and generating leads for potential
@@ -83,8 +93,10 @@ const HowItWorks = () => {
               Dweller Finance, providing a seamless flow of operations for all
               players involved in the property management process.
             </p>
-            <button className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
-             text-black">
+            <button
+              className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
+             text-black"
+            >
               Coming Soon
             </button>
           </div>
