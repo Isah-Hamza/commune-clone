@@ -7,49 +7,26 @@ import HowItWorks from "../components/HowItWorks";
 import guyWithPhone from "../assets/Dweller-Guy-with-phone01-min.png";
 import dwellerProduct from "../assets/Dweller-product.png";
 import { SlMouse } from "react-icons/sl";
+import Button from "../components/Button";
+import hand from "../assets/eyowo-hand.png";
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
-  let initalIndex = 0;
-  let timeout;
-
-  function carousel() {
-    var i;
-    var slides = document.getElementsByClassName("dec-item");
-    console.log("slides", slides);
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    initalIndex++;
-    if (initalIndex > slides.length) {
-      initalIndex = 1;
-    }
-    console.log("init index", initalIndex);
-    slides[initalIndex - 1].style.display = "block";
-    timeout = setTimeout(carousel, 8000); // Change image every 8 seconds
-  }
-
-  useEffect(() => {
-    carousel();
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
 
   return (
     <div
       id="app"
-      className="h-full w-full overflow-x-hidden text-sm sm:text-base"
+      className="h-full w-full overflow-x-hidden text-sm sm:text-base bg-[#fafafa]"
     >
       <div className="h-[1px] mt-[1px] lg:mt-8"></div>
       <a
         href="#footer"
-        className="z-[1000] absolute bottom-5 cursor-pointer left-1/2 -translate-x-1/2 w-fit animate-bounce"
+        className="z-[9] absolute bottom-5 cursor-pointer left-1/2 -translate-x-1/2 w-fit animate-bounce"
       >
         <SlMouse size={50} />
       </a>
       <Header {...{ setShowModal }} />
-      <section className="relative isolate mt-[72px] desktop-md:mt-[unset] mx-auto max-w-[1550px]">
+      <section className="relative isolate mt-[72px] desktop-md:mt-[unset] mx-auto max-w-[1500px]">
         <div className="absolute -z-1 top-[-8rem]">
           <svg
             width="728"
@@ -85,20 +62,16 @@ const Index = () => {
               <p className="whitespace-nowrap">Properties and Solutions</p>{" "}
             </h2>
             <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl mt-4 lg:mt-6 opacity-90">
-              Revolutionalizing property managment by providing property owners
-              and all players involved in the process with a comprehensive and
-              integrated platform that simplifies the management process and
-              provides a seamless experience.
+              At dweller, we bring everything real estate to your fingertip.
+              Easy, Friendly, and Robust.
             </p>
-            <button
+            <Button
               onClick={() => setShowModal(true)}
               // onClick={() => navigate("/payment")}
               type="button"
-              className="relative isolate bg-appcolor-500 px-10 py-4 text-white text-base rounded-lg font-semibold mt-7 cursor-pointer"
-            >
-              {" "}
-              Get Early Access{" "}
-            </button>
+              className="relative isolate px-10 py-3.5 mt-7 mx-auto sm:mx-[unset]"
+              text={"Get Early Access"}
+            />
           </div>
           <div
             // data-aos="slide-up"
@@ -116,22 +89,6 @@ const Index = () => {
               {/* </span> */}
             </div>
           </div>
-          <div
-            // data-aos="slide-up"
-            data-aos-offset="50"
-            className="order-1 lg:order-2 mb-10 mt-20 lg:-mt-56 lg:!ml-auto slide-up-fade-in dec-item"
-          >
-            <div className="flex justify-center lg:justify-end">
-              {/* <span className="lg:max-w-[min(30rem,45%)] lg:h-auto lg:w-auto h-[min(14rem,95vw)] w-[min(14rem,95vw)] inline-block"> */}
-              <img
-                src={dwellerProduct}
-                alt="Globes"
-                className="Img max-w-[500px] w-full md:w:unset"
-                style={{ "--transition": "opacity 200ms linear 0ms" }}
-              />
-              {/* </span> */}
-            </div>
-          </div>
         </div>
       </section>
       <AboutUs />
@@ -139,6 +96,24 @@ const Index = () => {
       <HowItWorks />
       {/* <OurPartners /> */}
       {/* <ContactUs /> */}
+      <section className="md:h-[550px] overflow-y-hidden pb-0 sm:pb-10 p-4 sm:p-10 rounded-3xl bg-white my-10 mt-28 max-w-[1150px] mx-auto flex flex-col md:flex-row items-center gap-5">
+        <div className=" flex flex-col gap-5 sm:w-3/5">
+          <p className="text-3xl sm:text-[3rem] sm:!leading-[55px] font-semibold text-appcolor-600">
+            Your phone number can be tied to your properties.
+          </p>
+          <p className="text-xl sm:text-2xl opacity-80 my-3">
+            {" "}
+            Just with your phone number, you have all your properties at your
+            fingerprint.
+          </p>
+          <div>
+            <Button text={"Get Dweller"} />
+          </div>
+        </div>
+        <div className="mt-10 sm:mt-0">
+          <img src={hand} alt="hand" className="w-[430px] h-[450px] sm:h-[550px]" />
+        </div>
+      </section>
       <section className="grid justify-center mb-8 mt-24">
         <p
           data-aos="fade-down"

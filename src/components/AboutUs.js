@@ -1,36 +1,60 @@
 import React from "react";
 import about_us from "../assets/dd5.png";
+import lady from "../assets/eyowo-lady.png";
+import Button from "./Button";
 
 const AboutUs = () => {
   return (
     <section id="about-us" className="relative isolate pt-14 xl:mt-16">
-      <h2
-        data-aos="fade-down"
-        id="about-us"
-        className="text-primary-base dark:text-appcolor-500 text-center font-bold text-2xl lg:text-4xl 2xl:text-5xl"
-      >
-        {" "}
-        About Dweller{" "}
-      </h2>
-      <div className="flex-col justify-center lg:flex-row flex lg:text-left lg:space-x-4 pt-4 lg:pt-8">
-        <div className="mx-auto text-center lg:min-w-[950px] lg:max-w-lg px-4 lg:px-0">
-          {/* <h3 className="font-semibold text-xl lg:text-2xl mb-7 lg:mb-9 text-appcolor-500">
-            {" "}
-            Real Estate solutions for modern Africa{" "}
-          </h3> */}
-          <div
-            data-aos="fade-down"
-            data-aos-delay="200"
-            className="grid gap-y-4 lg:gap-y-6 text-sm sm:text-base lg:text-xl 2xl:text-2xl"
-          >
-            <p>
-              {" "}
-              At Dweller, we are integrating technology into property operations
-              from finding properties, managing properties, financing
-              properties, connecting to major property infrastructure to give
-              our users a the best experience in managing thier homes and
-              properties.
+      <div className="flex sm:flex-row flex-col gap-16 max-w-[1200px] mx-auto justify-center px-5 sm:px-0">
+        <div className="w-full sm:w-[500px]">
+          <img
+            src={lady}
+            className="w-full sm:w-[unset] sm:min-w-[500px] h-80 sm:h-[600px] rounded-xl"
+            alt="lady in the about section"
+          />
+        </div>
+        <div className="max-w-[550px] flex flex-col gap-14 mt-3">
+          <div className="flex flex-col gap-2">
+            <p className="text-2xl sm:text-3xl font-semibold !tracking-wider mb-3 text-appcolor-600">
+              Africa’s Real Estate Value Chain Infrastructure.
             </p>
+            <p className="text-lg leading-8">
+              At dweller we are building solutions to integrate processes in the
+              real estate value chain. This is to help users harness the full
+              potential of their properties hereby improving productivity while
+              maximising profit. Dweller is building solutions across major
+              sectors in the real estate industry.
+            </p>
+          </div>
+          <div>
+            <p className="text-2xl sm:text-3xl font-semibold mb-3 text-appcolor-600">
+              We are cutting across:
+            </p>
+            <ul className="flex flex-col gap-1">
+              <li>
+                1. Improving facility operations and digitising all facility
+                processes.
+              </li>
+              <li>
+                2. Making Access to property financing easy for customers.
+              </li>
+              <li>
+                {" "}
+                3. Simplifying real estate operations such as managing
+                construction, property financing,
+                {/* maximising cost, providing */}
+                {/* coordinated market place */}
+                etc{" "}
+              </li>
+              <li>
+                4. To build thirdparty services to aid new protechs to innovate
+                quickly.
+              </li>
+            </ul>
+            <div className="mt-10">
+              <Button text={"Get Dweller"} />
+            </div>
           </div>
         </div>
       </div>

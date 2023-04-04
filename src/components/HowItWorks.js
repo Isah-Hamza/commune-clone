@@ -2,12 +2,15 @@ import React from "react";
 import { FcBriefcase, FcCustomerSupport, FcManager } from "react-icons/fc";
 import { TfiWallet } from "react-icons/tfi";
 import { FcHome } from "react-icons/fc";
+import card from "../assets/eyowo-card.svg";
+import manager from "../assets/social-media-manager.jpg";
+import Button from "./Button";
 
 const HowItWorks = () => {
   return (
     <section
       id="services"
-      className="relative isolate mt-16 xl:mt-32 lg:mt-40 mx-auto max-w-[1440px] px-3 sm:px-8 md:px-16 2xl:px-0"
+      className="relative isolate mt-16 xl:mt-32 lg:mt-40 mx-auto max-w-[1100px] 2xl:max-w-[1000px] px-5 sm:px-8 md:px-16 2xl:px-0"
     >
       <h2
         data-aos="fade-up"
@@ -16,29 +19,61 @@ const HowItWorks = () => {
       >
         Our Solutions{" "}
       </h2>
-      <div className="mx-auto grid md:grid-cols-2 gap-6 md:gap-10 mt-10">
+      <div className="mx-auto grid md:grid-cols-2 gap-6 md:gap-8 mt-10 flex justify-center">
         <div
-          data-aos="fade-down-right"
-          className={`min-h-40 rounded-lg purple`}
+          data-aos="fade-up"
+          className={`min-h-40 rounded-lg bg-white shadow-sm w-full sm:w-[470px]`}
         >
-          <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
-            <p className="flex items-center gap-1.5 text-lg md:text-[22px] font-bold">
-              <FcManager />
-              Dweller Manager
+          <div className="opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
+            <div>
+              <img alt="card" src={card} className="w-full" />
+            </div>
+            <p className="flex items-center gap-1.5 text-xl md:text-3xl !leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
+              {/* <FcManager /> */}
+              Managing Facilities can be easy with Dweller.
+              {/* (Dweller Mamager) */}
             </p>
-            <p>
-              This is an all-in-one application for facility companies and
-              landlords to manage all property-related operations, including
-              property management, community management, staff management,
-              visitor management, bill collection management, security and
-              emergency management, and more.
+            <p className="text-lg tracking-wider !leading-20">
+              Manage Properties, Work Orders, Assets, Communities, Smart Devices
+              and IOT, Central Vending for your communities, simplifying bills
+              Collection, Improving Community Security With Our Smart Gate and
+              Visitor Management
             </p>
-            <button className="shadow-xl text-sm px-7 py-2 rounded bg-gray-200 text-black hover:bg-appcolor-600 hover:text-white transition-all duration-500 ease-in-out">
-              Login
-            </button>
+            <Button
+              className="mt-5 shadow-xl text-sm px-8 py-4"
+              text={"Take me to Manager"}
+            />
           </div>
         </div>
-        <div data-aos="fade-down-left" className={`min-h-40 rounded-lg green`}>
+        <div
+          data-aos="fade-up"
+          className={`min-h-40 rounded-lg bg-white shadow-sm w-full sm:w-[470px]`}
+        >
+          <div className="opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
+            <div className="w-full overflow-hidden rounded-3xl">
+              <img
+                alt="manager"
+                src={manager}
+                className="w-full min-h-[250px]"
+              />
+            </div>
+            <p className="flex items-center gap-1.5 text-xl md:text-3xl !leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
+              {/* <FcManager /> */}
+              Property Financing, Investment and Debt Recovery.
+              {/* (Dweller Mamager) */}
+            </p>
+            <p className="text-lg tracking-wider !leading-20">
+              With Dweller property financing, institutions/investors can now
+              disburse money to aid projects without worrying about recovery.
+              With Dweller we connect financial institutions to projects.
+            </p>
+            <Button
+              className="mt-5 shadow-xl text-sm px-8 py-4"
+              text={"Coming Soon"}
+            />
+          </div>
+        </div>
+        {/* <div data-aos="fade-up" className={`min-h-40 rounded-lg green`}>
           <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
             <p className="flex items-center gap-2 text-lg md:text-[22px] font-semibold">
               <FcBriefcase color="coral" />
@@ -79,28 +114,7 @@ const HowItWorks = () => {
               Coming Soon
             </button>
           </div>
-        </div>
-        <div data-aos="fade-up-left" className={`min-h-40 rounded-lg darkBlue`}>
-          <div className="text-white opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
-            <p className="flex items-center gap-2 text-lg md:text-[22px] font-semibold">
-              <FcCustomerSupport />
-              Dweller Finance
-            </p>
-            <p>
-              This is an application for real estate companies to manage the
-              process of acquiring properties and generating leads for potential
-              investors. The application integrates with Dweller Manager and
-              Dweller Finance, providing a seamless flow of operations for all
-              players involved in the property management process.
-            </p>
-            <button
-              className="shadow-md text-sm px-5 py-2 rounded bg-gray-200
-             text-black"
-            >
-              Coming Soon
-            </button>
-          </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

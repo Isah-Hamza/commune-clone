@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import dwellerLogo from "../assets/dweller-logo.png";
+import Button from "./Button";
 
 const Header = ({ setShowModal }) => {
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -44,26 +45,37 @@ const Header = ({ setShowModal }) => {
           <nav>
             <ul className="flex items-center space-x-11">
               <li>
-                <a href="#about-us">About Us</a>
+                <a
+                  className="duration-300 transition-all ease-in-out hover:underline hover:text-[#e6690d]"
+                  href="#about-us"
+                >
+                  About Us
+                </a>
               </li>
               <li>
-                <a href="#services">Services</a>
+                <a
+                  className="duration-300 transition-all ease-in-out hover:underline hover:text-[#e6690d]"
+                  href="#services"
+                >
+                  Services
+                </a>
               </li>
               <li>
-                <a href="#footer">Contact Us</a>
+                <a
+                  className="duration-300 transition-all ease-in-out hover:underline hover:text-[#e6690d]"
+                  href="#footer"
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
           </nav>
-          <button
+          <Button
             onClick={() => setShowModal(true)}
-            // onClick={() => navigate("/payment")}
             type="button"
-            className="bg-appcolor-500 fill-before px-8 py-3 text-white text-lg rounded-lg font-semibold cursor-pointer"
-            data-v-682d5bac=""
-          >
-            {" "}
-            Get Early Access{" "}
-          </button>
+            className="px-10 py-3"
+            text={"Our Solutions"}
+          />
         </div>
       </div>
       <div
@@ -121,17 +133,32 @@ const Header = ({ setShowModal }) => {
               <nav>
                 <ul className="flex flex-col gap-10">
                   <li>
-                    <a href="#about-us">About Us</a>
+                    <a
+                      className="duration-300 transition-all ease-in-out hover:underline hover:text-[#e6690d]"
+                      href="#about-us"
+                    >
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a href="#services">Services</a>
+                    <a
+                      className="duration-300 transition-all ease-in-out hover:underline hover:text-[#e6690d]"
+                      href="#services"
+                    >
+                      Services
+                    </a>
                   </li>
                   <li>
-                    <a href="#footer">Contact Us</a>
+                    <a
+                      className="duration-300 transition-all ease-in-out hover:underline hover:text-[#e6690d]"
+                      href="#footer"
+                    >
+                      Contact Us
+                    </a>
                   </li>
                 </ul>
               </nav>
-              <button
+              {/* <button
                 onClick={() => setShowModal(true)}
                 // onClick={() => navigate("/payment")}
                 type="button"
@@ -140,7 +167,13 @@ const Header = ({ setShowModal }) => {
               >
                 {" "}
                 Get Early Access{" "}
-              </button>
+              </button> */}
+              <Button
+                onClick={() => setShowModal(true)}
+                type="button"
+                className="px-10 py-3"
+                text={"Our Solutions"}
+              />
             </div>
           </div>
         </div>
