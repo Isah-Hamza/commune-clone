@@ -9,6 +9,7 @@ import dwellerProduct from "../assets/Dweller-product.png";
 import { SlMouse } from "react-icons/sl";
 import Button from "../components/Button";
 import hand from "../assets/eyowo-hand.png";
+import iphone from "../assets/iPhone14.png";
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
@@ -99,8 +100,7 @@ const Index = () => {
       <section className="md:h-[550px] overflow-y-hidden pb-0 sm:pb-10 p-4 sm:p-10 rounded-3xl bg-white my-10 mt-28 max-w-[1150px] mx-auto flex flex-col md:flex-row items-center gap-5">
         <div className=" flex flex-col gap-5 sm:w-3/5">
           <p className="text-3xl sm:text-[3rem] sm:!leading-[55px] font-semibold text-appcolor-600">
-            Living should be simple, classy and luxurious and that is why you
-            need Dweller.
+            Make Living Simple, Classy and Luxurious.
           </p>
           <p className="text-xl sm:text-2xl opacity-80 my-3">
             {" "}
@@ -109,9 +109,38 @@ const Index = () => {
             manage home finances/loans, own and rent properties all with
             Dweller.
           </p>
-          <div className="flex items-center gap-2 mt-2">
-            <Button text={"Download from Playstore"} className={"py-4"} />
-            <Button text={"Download from Appstore"} className={"py-4"} />
+          <div className="flex items-center gap-4 mt-2">
+            <button
+              data-aos="fade-right"
+              color="#fff"
+              className="w-52"
+              href=""
+              data-v-682d5bac=""
+            >
+              <img
+                alt="appstore icon"
+                aria-label="Appstore icon"
+                src="https://res.cloudinary.com/themachine/image/upload/v1661027211/commune-web/public/appstore2_kj1mmc.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-full"
+              />
+            </button>
+            <button
+              data-aos="fade-left"
+              type="button"
+              color="#fff"
+              className="w-52"
+              href=""
+              data-v-682d5bac=""
+            >
+              <img
+                alt="playstore icon"
+                aria-label="Playstore icon"
+                src="https://res.cloudinary.com/themachine/image/upload/v1661027214/commune-web/public/playstore2_vfuxu1.png"
+                className="w-full h-full"
+              />
+            </button>
           </div>
         </div>
         <div className="mt-10 sm:mt-0">
@@ -122,7 +151,7 @@ const Index = () => {
           />
         </div>
       </section>
-      <section className="grid justify-center mb-8 mt-24">
+      {/* <section className="grid justify-center mb-8 mt-24">
         <p
           data-aos="fade-down"
           data-aos-offset="100"
@@ -164,7 +193,7 @@ const Index = () => {
             />
           </button>
         </div>
-      </section>
+      </section> */}
       <Footer />
       {showModal ? (
         <div className="grid place-content-center z-10 fixed inset-0 bg-black/50 ">

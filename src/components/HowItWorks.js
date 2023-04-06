@@ -6,13 +6,12 @@ import card from "../assets/eyowo-card.svg";
 import manager from "../assets/social-media-manager.jpg";
 
 import estate1 from "../assets/estate.jpg";
-import estate2 from "../assets/estate.2jpg.jpg";
+// import estate2 from "../assets/estate.2jpg.jpg";
 
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
 
 const HowItWorks = () => {
-  const navigate = useNavigate();
+
   return (
     <section
       id="services"
