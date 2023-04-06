@@ -9,7 +9,7 @@ import dwellerProduct from "../assets/Dweller-product.png";
 import { SlMouse } from "react-icons/sl";
 import Button from "../components/Button";
 import hand from "../assets/eyowo-hand.png";
-import iphone from "../assets/iPhone14.png";
+import iphone from "../assets/Phone.png";
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
@@ -102,7 +102,7 @@ const Index = () => {
           <p className="text-3xl sm:text-[3rem] sm:!leading-[55px] font-semibold text-appcolor-600">
             Make Living Simple, Classy and Luxurious.
           </p>
-          <p className="text-xl sm:text-2xl opacity-80 my-3">
+          <p className="text-xl sm:text-xl opacity-80 my-3">
             {" "}
             You can now interact with your community/estate, get access to
             property financing(rents and sale), pay bills, run errands, IOT,
@@ -110,13 +110,7 @@ const Index = () => {
             Dweller.
           </p>
           <div className="flex items-center gap-4 mt-2">
-            <button
-              data-aos="fade-right"
-              color="#fff"
-              className="w-52"
-              href=""
-              data-v-682d5bac=""
-            >
+            <button color="#fff" className="w-52" href="" data-v-682d5bac="">
               <img
                 alt="appstore icon"
                 aria-label="Appstore icon"
@@ -127,7 +121,6 @@ const Index = () => {
               />
             </button>
             <button
-              data-aos="fade-left"
               type="button"
               color="#fff"
               className="w-52"
@@ -144,11 +137,7 @@ const Index = () => {
           </div>
         </div>
         <div className="mt-10 sm:mt-0">
-          <img
-            src={hand}
-            alt="hand"
-            className="w-[430px] h-[450px] sm:h-[550px]"
-          />
+          <img src={iphone} alt="hand" className="w-[430px] h-[450px]" />
         </div>
       </section>
       {/* <section className="grid justify-center mb-8 mt-24">
