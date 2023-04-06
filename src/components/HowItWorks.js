@@ -4,9 +4,15 @@ import { TfiWallet } from "react-icons/tfi";
 import { FcHome } from "react-icons/fc";
 import card from "../assets/eyowo-card.svg";
 import manager from "../assets/social-media-manager.jpg";
+
+import estate1 from "../assets/estate.jpg";
+import estate2 from "../assets/estate.2jpg.jpg";
+
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const HowItWorks = () => {
+  const navigate = useNavigate();
   return (
     <section
       id="services"
@@ -26,7 +32,7 @@ const HowItWorks = () => {
         >
           <div className="opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
             <div>
-              <img alt="card" src={card} className="w-full" />
+              <img alt="card" src={estate1} className="w-full  min-h-[250px] rounded-3xl" />
             </div>
             <p className="flex items-center gap-1.5 text-xl md:text-3xl !leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
               {/* <FcManager /> */}
@@ -39,10 +45,12 @@ const HowItWorks = () => {
               Collection, Improving Community Security With Our Smart Gate and
               Visitor Management
             </p>
-            <Button
-              className="mt-5 shadow-xl text-sm px-8 py-4"
-              text={"Take me to Manager"}
-            />
+            <a href="http://www.demo.dweller.africa">
+              <Button
+                className="mt-5 shadow-xl text-sm px-8 py-4"
+                text={"Take me to Manager"}
+              />
+            </a>
           </div>
         </div>
         <div

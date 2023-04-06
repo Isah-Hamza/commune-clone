@@ -99,19 +99,27 @@ const Index = () => {
       <section className="md:h-[550px] overflow-y-hidden pb-0 sm:pb-10 p-4 sm:p-10 rounded-3xl bg-white my-10 mt-28 max-w-[1150px] mx-auto flex flex-col md:flex-row items-center gap-5">
         <div className=" flex flex-col gap-5 sm:w-3/5">
           <p className="text-3xl sm:text-[3rem] sm:!leading-[55px] font-semibold text-appcolor-600">
-            Your phone number can be tied to your properties.
+            Living should be simple, classy and luxurious and that is why you
+            need Dweller.
           </p>
           <p className="text-xl sm:text-2xl opacity-80 my-3">
             {" "}
-            Just with your phone number, you have all your properties at your
-            fingerprint.
+            You can now interact with your community/estate, get access to
+            property financing(rents and sale), pay bills, run errands, IOT,
+            manage home finances/loans, own and rent properties all with
+            Dweller.
           </p>
-          <div>
-            <Button text={"Get Dweller"} />
+          <div className="flex items-center gap-2 mt-2">
+            <Button text={"Download from Playstore"} className={"py-4"} />
+            <Button text={"Download from Appstore"} className={"py-4"} />
           </div>
         </div>
         <div className="mt-10 sm:mt-0">
-          <img src={hand} alt="hand" className="w-[430px] h-[450px] sm:h-[550px]" />
+          <img
+            src={hand}
+            alt="hand"
+            className="w-[430px] h-[450px] sm:h-[550px]"
+          />
         </div>
       </section>
       <section className="grid justify-center mb-8 mt-24">
