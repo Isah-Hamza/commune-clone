@@ -38,7 +38,7 @@ const HowItWorks = () => {
               Managing Facilities can be easy with Dweller.
               {/* (Dweller Mamager) */}
             </p>
-            <p className="text-base sm:text-lg sm:tracking-wider !leading-20">
+            <p className="text-base sm:!text-lg sm:tracking-wider !leading-20">
               Manage Properties, Work Orders, Assets, Communities, Smart Devices
               and IOT, Central Vending for your communities, simplifying bills
               Collection, Improving Community Security With Our Smart Gate and
