@@ -29,16 +29,16 @@ const HowItWorks = () => {
           data-aos="fade-up"
           className={`min-h-40 rounded-lg bg-white shadow-sm w-full sm:w-[470px]`}
         >
-          <div className="opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
+          <div className="opacity-90 flex items-start flex-col sm:gap-5 sm:p-10 p-5">
             <div>
               <img alt="card" src={estate1} className="w-full  min-h-[250px] rounded-3xl" />
             </div>
-            <p className="flex items-center gap-1.5 text-xl md:text-3xl !leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
+            <p className="flex items-center gap-1.5 text-xl md:text-3xl leading-[27px] sm:!leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
               {/* <FcManager /> */}
               Managing Facilities can be easy with Dweller.
               {/* (Dweller Mamager) */}
             </p>
-            <p className="text-lg tracking-wider !leading-20">
+            <p className="text-base sm:text-lg sm:tracking-wider !leading-20">
               Manage Properties, Work Orders, Assets, Communities, Smart Devices
               and IOT, Central Vending for your communities, simplifying bills
               Collection, Improving Community Security With Our Smart Gate and
@@ -56,7 +56,7 @@ const HowItWorks = () => {
           data-aos="fade-up"
           className={`min-h-40 rounded-lg bg-white shadow-sm w-full sm:w-[470px]`}
         >
-          <div className="opacity-90 flex items-start flex-col gap-5 sm:p-10 p-5">
+          <div className="opacity-90 flex items-start flex-col sm:gap-5 sm:p-10 p-5">
             <div className="w-full overflow-hidden rounded-3xl">
               <img
                 alt="manager"
@@ -64,12 +64,12 @@ const HowItWorks = () => {
                 className="w-full min-h-[250px]"
               />
             </div>
-            <p className="flex items-center gap-1.5 text-xl md:text-3xl !leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
+            <p className="flex items-center gap-1.5 text-xl md:text-3xl leading-[27px] sm:!leading-[38px] md:tracking-wider font-bold my-4 mt-6 text-appcolor-600">
               {/* <FcManager /> */}
               Property Financing, Investment and Debt Recovery.
               {/* (Dweller Mamager) */}
             </p>
-            <p className="text-lg tracking-wider !leading-20">
+            <p className="text-base sm:text-lg sm:tracking-wider !leading-20">
               With Dweller property financing, institutions/investors can now
               disburse money to aid projects without worrying about recovery.
               With Dweller we connect financial institutions to projects.

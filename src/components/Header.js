@@ -70,12 +70,14 @@ const Header = ({ setShowModal }) => {
               </li>
             </ul>
           </nav>
-          <Button
-            onClick={() => setShowModal(true)}
-            type="button"
-            className="px-10 py-3"
-            text={"Our Solutions"}
-          />
+          <a href="#services">
+            <Button
+              onClick={() => setShowModal(true)}
+              type="button"
+              className="px-10 py-3"
+              text={"Our Solutions"}
+            />
+          </a>
         </div>
       </div>
       <div

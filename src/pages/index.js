@@ -63,16 +63,21 @@ const Index = () => {
               <p className="whitespace-nowrap">Properties and Solutions</p>{" "}
             </h2>
             <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl mt-4 lg:mt-6 opacity-90">
-              At dweller, we bring everything real estate to your fingertip.
-              Easy, Friendly, and Robust.
+              You can now interact with your community/estate, get access to
+              property financing(rents and sale), pay bills, run errands, IOT,
+              manage home finances/loans, own and rent properties all with
+              Dweller.
             </p>
-            <Button
-              onClick={() => setShowModal(true)}
-              // onClick={() => navigate("/payment")}
-              type="button"
-              className="relative isolate px-10 py-3.5 mt-7 mx-auto sm:mx-[unset]"
-              text={"Get Early Access"}
-            />
+
+            <a href="#services">
+              <Button
+                onClick={() => setShowModal(true)}
+                // onClick={() => navigate("/payment")}
+                type="button"
+                className="relative isolate px-10 py-3.5 mt-7 mx-auto sm:mx-[unset]"
+                text={"Our Solutions"}
+              />
+            </a>
           </div>
           <div
             // data-aos="slide-up"
@@ -97,20 +102,24 @@ const Index = () => {
       <HowItWorks />
       {/* <OurPartners /> */}
       {/* <ContactUs /> */}
-      <section className="md:h-[550px] overflow-y-hidden pb-0 sm:pb-10 p-4 sm:p-10 rounded-3xl bg-white my-10 mt-28 max-w-[1150px] mx-auto flex flex-col md:flex-row items-center gap-5">
+      <section className="md:h-[550px] overflow-y-hidden pb-0 sm:pb-10 p-4 sm:p-10 rounded-3xl bg-white my-10 mt-14 sm:mt-28 max-w-[1150px] mx-auto flex flex-col md:flex-row items-center gap-5">
         <div className=" flex flex-col gap-5 sm:w-3/5">
           <p className="text-3xl sm:text-[3rem] sm:!leading-[55px] font-semibold text-appcolor-600">
             Make Living Simple, Classy and Luxurious.
           </p>
           <p className="text-xl sm:text-xl opacity-80 my-3">
             {" "}
-            You can now interact with your community/estate, get access to
-            property financing(rents and sale), pay bills, run errands, IOT,
-            manage home finances/loans, own and rent properties all with
-            Dweller.
+            Discover luxurious living with our expertly curated properties. Our
+            unmatched expertise ensures an elegant and sophisticated living
+            experience. Manage your dream home today.
           </p>
           <div className="flex items-center gap-4 mt-2">
-            <button color="#fff" className="w-52" href="" data-v-682d5bac="">
+            <button
+              color="#fff"
+              className="w-1/2 sm:w-52"
+              href=""
+              data-v-682d5bac=""
+            >
               <img
                 alt="appstore icon"
                 aria-label="Appstore icon"
@@ -123,7 +132,7 @@ const Index = () => {
             <button
               type="button"
               color="#fff"
-              className="w-52"
+              className="w-1/2 sm:w-52"
               href=""
               data-v-682d5bac=""
             >
@@ -137,7 +146,11 @@ const Index = () => {
           </div>
         </div>
         <div className="mt-10 sm:mt-0">
-          <img src={iphone} alt="hand" className="w-[430px] h-[450px]" />
+          <img
+            src={iphone}
+            alt="hand"
+            className="w-[430px] [h-350px] sm:h-[450px]"
+          />
         </div>
       </section>
       {/* <section className="grid justify-center mb-8 mt-24">
