@@ -104,7 +104,7 @@ const Index = () => {
       {/* <ContactUs /> */}
       <section className="md:h-[550px] overflow-y-hidden pb-0 sm:pb-10 p-4 sm:p-10 rounded-3xl bg-white my-10 mt-14 sm:mt-28 max-w-[1150px] mx-auto flex flex-col md:flex-row items-center gap-5">
         <div className=" flex flex-col gap-5 sm:w-3/5">
-          <p className="text-3xl sm:text-[3rem] sm:!leading-[55px] font-semibold text-appcolor-600">
+          <p className="text-3xl sm:text-[2.9rem] sm:!leading-[55px] font-semibold text-appcolor-600">
             Make Living Simple, Classy and Luxurious.
           </p>
           <p className="text-xl sm:text-xl opacity-80 my-3">
@@ -149,7 +149,7 @@ const Index = () => {
           <img
             src={iphone}
             alt="hand"
-            className="w-[430px] [h-350px] sm:h-[450px]"
+            className="w-[500px] [h-350px] sm:h-[450px]"
           />
         </div>
       </section>

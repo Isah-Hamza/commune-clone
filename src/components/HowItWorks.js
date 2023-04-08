@@ -44,7 +44,7 @@ const HowItWorks = () => {
               Collection, Improving Community Security With Our Smart Gate and
               Visitor Management
             </p>
-            <a href="http://www.demo.dweller.africa">
+            <a href="http://www.manager.dweller.africa">
               <Button
                 className="mt-5 shadow-xl text-sm px-8 py-4"
                 text={"Take me to Manager"}
